@@ -1345,23 +1345,473 @@ a { color: inherit; }
 .footer-legal { font-size: .875rem; color: var(--graphite); text-align: right; }
 
 /* --------------------------------------------------------------------------
+   Services and pricing page
+   -------------------------------------------------------------------------- */
+
+.site-nav a[aria-current="page"] { color: var(--ink); background-size: 100% 1.5px; }
+
+.page-hero { padding: clamp(48px, 7vw, 96px) 0 clamp(56px, 7vw, 96px); }
+
+.page-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: clamp(36px, 6vw, 96px);
+  align-items: end;
+}
+.page-hero h1 { max-width: 18ch; font-size: clamp(2.3rem, 4vw, 3.6rem); }
+.page-hero .lede {
+  max-width: 36em;
+  margin-top: 24px;
+  font-size: clamp(1.0625rem, 1.3vw, 1.1875rem);
+  color: var(--graphite);
+}
+
+.currency-switch {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-top: 36px;
+  padding: 4px;
+  border: 1px solid var(--rule-strong);
+  border-radius: 6px;
+  background: var(--surface);
+}
+.currency-label {
+  padding: 0 10px 0 8px;
+  font-size: .8125rem;
+  font-weight: 500;
+  color: var(--graphite);
+}
+.currency-switch button {
+  min-width: 52px;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--slate);
+  font: 600 .875rem/1 var(--font);
+  letter-spacing: .02em;
+  cursor: pointer;
+  transition: background-color .2s, color .2s;
+}
+.currency-switch button:hover { background: var(--mist); }
+.currency-switch button[aria-pressed="true"] { background: var(--slate-deep); color: var(--paper); }
+
+.price-note {
+  max-width: 34em;
+  margin-top: 14px;
+  font-size: .8125rem;
+  color: var(--graphite);
+}
+
+/* Step map: a compact index of the four steps with their entry prices. */
+.step-map {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--rule-strong);
+}
+.step-map li { border-bottom: 1px solid var(--rule); }
+.step-map a {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 12px;
+  padding: 18px 4px;
+  text-decoration: none;
+  transition: background-color .2s;
+}
+.step-map a:hover { background: var(--surface); }
+.step-map-num {
+  font-family: var(--font-logo);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--slate);
+}
+.step-map-name { font-weight: 600; color: var(--ink); }
+.step-map-price {
+  font-size: .9375rem;
+  color: var(--graphite);
+  white-space: nowrap;
+}
+.step-map-price .price { font-weight: 600; color: var(--ink); }
+
+.price { font-variant-numeric: tabular-nums; }
+
+/* Shared lists and price blocks */
+
+.tick-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: .9688rem;
+  color: var(--slate);
+}
+.tick-list li { position: relative; padding-left: 26px; }
+.tick-list li::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: .42em;
+  width: 10px;
+  height: 6px;
+  border-left: 1.75px solid var(--signal);
+  border-bottom: 1.75px solid var(--signal);
+  transform: rotate(-45deg);
+}
+.tick-list-invert { color: rgba(250, 250, 250, .86); }
+
+.price-block {
+  margin: 32px 0 28px;
+  padding: 20px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.price-big {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -.025em;
+  color: var(--ink);
+}
+.price-terms {
+  margin-top: 8px;
+  font-size: .9375rem;
+  color: var(--graphite);
+}
+.price-block-invert { border-color: var(--rule-invert); }
+.price-block-invert .price-big { color: var(--paper); }
+.price-block-invert .price-terms { color: rgba(250, 250, 250, .7); }
+
+/* Step 1: assessment */
+
+.assessment {
+  background: var(--surface);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.package-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(36px, 6vw, 96px);
+  align-items: start;
+}
+.package-feature-lede {
+  max-width: 34em;
+  margin-top: 20px;
+  font-size: clamp(1.0625rem, 1.3vw, 1.1875rem);
+  color: var(--graphite);
+}
+
+.package-feature-detail {
+  padding: clamp(26px, 3vw, 40px);
+  border: 1px solid var(--signal);
+  border-radius: 8px;
+  background: var(--paper);
+}
+.package-feature-detail h3 { margin-bottom: 16px; }
+.package-feature-detail h3 + .tick-list { margin-bottom: 32px; }
+
+.week-list { margin: 0; }
+.week-list > div {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--rule);
+  font-size: .9688rem;
+}
+.week-list dt { font-weight: 600; color: var(--ink); }
+.week-list dd { margin: 0; color: var(--graphite); }
+
+/* Step 2: pilots */
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 2.4vw, 28px);
+  margin-top: 56px;
+}
+
+.package {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(26px, 3vw, 36px);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--surface);
+}
+.package-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.package-top .service-glyph { width: 24px; height: 36px; }
+.package-layer {
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--graphite);
+}
+.package h3 { font-size: 1.375rem; }
+.package-fit {
+  margin: 8px 0 22px;
+  color: var(--graphite);
+}
+.package-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 22px;
+  border-top: 1px solid var(--rule);
+  font-size: .9375rem;
+  color: var(--graphite);
+}
+.package .tick-list { margin-bottom: 28px; }
+.package-meta b {
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -.02em;
+  color: var(--ink);
+}
+
+.blueprints {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: clamp(28px, 5vw, 80px);
+  margin-top: clamp(64px, 8vw, 104px);
+  padding-top: 40px;
+  border-top: 1px solid var(--rule-strong);
+}
+.blueprints-head h3 { font-size: 1.5rem; }
+.blueprints-head p { margin-top: 14px; color: var(--graphite); }
+
+.blueprint-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 32px;
+  margin: 0;
+}
+.blueprint-list dt { font-weight: 600; color: var(--ink); }
+.blueprint-list dd {
+  margin: 6px 0 0;
+  font-size: .9375rem;
+  color: var(--graphite);
+}
+
+/* Step 3: program */
+
+.program {
+  background: var(--slate);
+  color: var(--paper);
+}
+.program h2 { color: var(--paper); max-width: 14ch; }
+.program-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(36px, 6vw, 96px);
+  align-items: start;
+}
+.program-lede {
+  max-width: 32em;
+  margin-top: 20px;
+  font-size: clamp(1.0625rem, 1.3vw, 1.1875rem);
+  color: rgba(250, 250, 250, .78);
+}
+.program-detail {
+  padding: clamp(26px, 3vw, 40px);
+  border: 1px solid var(--rule-invert);
+  border-radius: 8px;
+  background: rgba(250, 250, 250, .04);
+}
+.program-detail h3 { margin-bottom: 18px; color: var(--paper); }
+.program-extra {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule-invert);
+  font-size: .9688rem;
+  color: rgba(250, 250, 250, .76);
+}
+.program-extra b { color: var(--paper); }
+
+/* Step 4: retainers */
+
+.retainer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2.4vw, 28px);
+  margin-top: 56px;
+  align-items: stretch;
+}
+.retainer {
+  position: relative;
+  padding: clamp(26px, 3vw, 34px);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--surface);
+}
+.retainer.is-common { border-color: var(--slate-deep); box-shadow: var(--shadow-md); }
+.retainer-flag {
+  position: absolute;
+  top: -12px;
+  left: clamp(26px, 3vw, 34px);
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--slate-deep);
+  color: var(--paper);
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.retainer h3 { font-size: 1.25rem; }
+.retainer-price {
+  margin-top: 14px;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -.025em;
+  color: var(--ink);
+}
+.retainer-price span:last-child {
+  font-size: .9375rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--graphite);
+}
+.retainer-fit {
+  margin: 8px 0 22px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--rule);
+  font-size: .9375rem;
+  color: var(--graphite);
+}
+
+/* FAQ */
+
+.faq {
+  background: var(--surface);
+  border-top: 1px solid var(--rule);
+}
+.faq-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+  gap: clamp(36px, 6vw, 96px);
+  align-items: start;
+}
+.faq-list { border-top: 1px solid var(--rule-strong); }
+.faq-list details { border-bottom: 1px solid var(--rule); }
+.faq-list summary {
+  position: relative;
+  padding: 20px 40px 20px 0;
+  font-weight: 600;
+  color: var(--ink);
+  list-style: none;
+  cursor: pointer;
+}
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  margin-top: -7px;
+  border-right: 1.75px solid var(--slate);
+  border-bottom: 1.75px solid var(--slate);
+  transform: rotate(45deg);
+  transition: transform .2s, margin-top .2s;
+}
+.faq-list details[open] summary::after { transform: rotate(-135deg); margin-top: -2px; }
+.faq-list summary:hover { color: var(--slate-deep); }
+.faq-list details p {
+  max-width: 44em;
+  padding: 0 40px 22px 0;
+  color: var(--graphite);
+}
+
+/* Closing call to action */
+
+.cta-band {
+  padding: clamp(56px, 7vw, 88px) 0;
+  background: var(--slate-deep);
+  color: var(--paper);
+}
+.cta-band-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px 48px;
+}
+.cta-band h2 { color: var(--paper); font-size: clamp(1.75rem, 2.8vw, 2.4rem); }
+.cta-band p { margin-top: 10px; color: rgba(250, 250, 250, .76); }
+.cta-band-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 28px;
+}
+.cta-band-mail {
+  color: var(--paper);
+  font-size: .9688rem;
+  text-decoration: underline;
+  text-decoration-color: var(--signal);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+}
+
+/* Prices on the home page link through to the pricing page. */
+.engage-price { font-weight: 600; color: var(--ink); }
+.engage-more {
+  display: inline-block;
+  margin-left: 6px;
+  font-weight: 600;
+  color: var(--slate-deep);
+  text-decoration: underline;
+  text-decoration-color: var(--signal);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 1100px) {
+  .blueprint-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 960px) {
+  .page-hero-grid,
+  .package-feature,
+  .program-grid,
+  .faq-grid,
+  .blueprints { grid-template-columns: 1fr; }
+  .retainer-grid { grid-template-columns: 1fr; max-width: 560px; }
+  .retainer-grid { gap: 32px; }
+}
+
+@media (max-width: 700px) {
+  .package-grid,
+  .blueprint-list { grid-template-columns: 1fr; }
+  .step-map a { grid-template-columns: 36px minmax(0, 1fr); }
+  .step-map-price { grid-column: 2; white-space: normal; }
+}
+
+/* --------------------------------------------------------------------------
    Responsive
    -------------------------------------------------------------------------- */
 
-@media (max-width: 1100px) {
-  .capability-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .engage-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-
-@media (max-width: 1024px) {
-  .start-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .agent-list { grid-template-columns: 1fr; }
-  .record-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-
-@media (max-width: 860px) {
-  :root { --header-h: 68px; }
-
+/* Five nav links need more room than the page layout does, so the menu
+   collapses earlier than the content grids. */
+@media (max-width: 1080px) {
   .nav-toggle { display: block; }
 
   .site-nav {
@@ -1392,6 +1842,22 @@ a { color: inherit; }
     background: none;
   }
   .site-nav .btn { margin-top: 20px; }
+}
+
+@media (max-width: 1100px) {
+  .capability-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .engage-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 1024px) {
+  .start-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .agent-list { grid-template-columns: 1fr; }
+  .record-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 860px) {
+  :root { --header-h: 68px; }
+
 
   .journey-grid,
   .e2e-grid,

@@ -6,6 +6,7 @@
 # Contains the business plan, the client-acquisition plan and sales contacts.
 RavelStack(Planned New Company).md
 *.private.md
+gtm/
 
 # Working/source assets not used by the built site.
 # Traceform's TTF source is a licensed font -- keep it out of a public repo.

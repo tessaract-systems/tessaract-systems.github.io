@@ -421,7 +421,67 @@
   }());
 
   /* ---------------------------------------------------------------------
-     7. Footer year
+     7. Price currency
+     Every price element carries data-usd, data-eur, data-gbp and data-aed.
+     The visitor's choice is remembered; a first visit guesses from the
+     time zone and otherwise stays on USD, which is also the no-JS text.
+     --------------------------------------------------------------------- */
+  (function () {
+    var prices = Array.prototype.slice.call(document.querySelectorAll('[data-usd]'));
+    if (!prices.length) return;
+
+    var CODES = ['usd', 'eur', 'gbp', 'aed'];
+    var KEY = 'ts-currency';
+    var buttons = Array.prototype.slice.call(document.querySelectorAll('[data-currency]'));
+    var formatters = {};
+
+    var guess = function () {
+      try {
+        var tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+        if (tz === 'Europe/London') return 'gbp';
+        if (tz.indexOf('Europe/') === 0) return 'eur';
+        if (tz === 'Asia/Dubai') return 'aed';
+      } catch (e) { /* fall through */ }
+      return 'usd';
+    };
+
+    var format = function (code, value) {
+      if (!formatters[code]) {
+        formatters[code] = new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: code.toUpperCase(),
+          maximumFractionDigits: 0
+        });
+      }
+      return formatters[code].format(value);
+    };
+
+    var apply = function (code) {
+      prices.forEach(function (el) {
+        var value = Number(el.getAttribute('data-' + code));
+        if (!isNaN(value) && value > 0) el.textContent = format(code, value);
+      });
+      buttons.forEach(function (button) {
+        button.setAttribute('aria-pressed', String(button.getAttribute('data-currency') === code));
+      });
+    };
+
+    var saved = null;
+    try { saved = window.localStorage.getItem(KEY); } catch (e) { /* storage blocked */ }
+    apply(CODES.indexOf(saved) > -1 ? saved : guess());
+
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var code = button.getAttribute('data-currency');
+        if (CODES.indexOf(code) < 0) return;
+        apply(code);
+        try { window.localStorage.setItem(KEY, code); } catch (e) { /* storage blocked */ }
+      });
+    });
+  }());
+
+  /* ---------------------------------------------------------------------
+     8. Footer year
      --------------------------------------------------------------------- */
   (function () {
     var year = document.getElementById('year');
