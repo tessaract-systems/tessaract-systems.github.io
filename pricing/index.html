@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Services and pricing — Tessaract Systems</title>
-  <meta name="description" content="Fixed-price data and AI packages: a two-week assessment, one-layer pilots, an end-to-end program and monthly retainers. Prices in USD, EUR, GBP and AED.">
+  <title>Services and Packages — Tessaract Systems</title>
+  <meta name="description" content="Fixed-scope data and AI packages: a two-week assessment, one-layer pilots, an end-to-end program and monthly retainers. We confirm your price on a short call.">
 
   <link rel="canonical" href="https://tessaractsystems.com/pricing/">
 
@@ -59,10 +59,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What does \"from\" mean?",
+      "name": "Why aren't prices listed?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It's the price for the scope listed under each package. If your situation needs more, such as extra systems, more metrics or a phone line for a voice agent, we tell you the fixed price after the assessment, before any work starts."
+        "text": "Because the honest number depends on how many systems are involved and what state the data is in, and a figure on a page would be wrong for most readers. Tell us the shape of it on a short call and we'll give you a fixed price for the scope, in writing, before any work starts."
       }
     },
     {
@@ -164,32 +164,26 @@
   <main id="main">
 
     <!-- ================================================================
-         Prices: every [data-usd] element also carries data-eur, data-gbp
-         and data-aed. main.js swaps the text when the visitor changes
-         currency. The text inside each element is the USD fallback for
-         visitors without JavaScript, so keep it in step with data-usd.
+         Amounts are deliberately not published. Scope, duration and terms
+         are. The price for a given scope is confirmed on a call.
          Internal source of truth: gtm/02-Service-catalogue-and-pricing.md
+         The currency switcher in main.js stays in place and lies dormant:
+         it activates automatically if [data-usd] elements ever return.
          ================================================================ -->
 
     <section class="page-hero">
       <div class="wrap page-hero-grid">
         <div>
-          <p class="eyebrow">Services and pricing</p>
-          <h1>Fixed prices for every step, from first assessment to running agents.</h1>
+          <p class="eyebrow">Services and packages</p>
+          <h1>Fixed scope for every step, from first assessment to running agents.</h1>
           <p class="lede">
-            Every package has a defined scope, a named deliverable and a price agreed before we start.
-            Most clients begin with the assessment, and its fee is credited in full against the pilot
-            that follows.
+            Every package has a defined scope and a named deliverable, with a fixed price agreed
+            before anything starts. Tell us which one fits on a short call and we&rsquo;ll confirm the
+            number for your scope. Most clients begin with the assessment, and its fee is credited in
+            full against the pilot that follows.
           </p>
 
-          <div class="currency-switch" role="group" aria-label="Show prices in">
-            <span class="currency-label">Show prices in</span>
-            <button type="button" data-currency="usd" aria-pressed="true">USD</button>
-            <button type="button" data-currency="eur" aria-pressed="false">EUR</button>
-            <button type="button" data-currency="gbp" aria-pressed="false">GBP</button>
-            <button type="button" data-currency="aed" aria-pressed="false">AED</button>
-          </div>
-          <p class="price-note">Prices exclude VAT and local taxes. Cloud, platform and model usage is billed to you directly by the provider, never marked up.</p>
+          <p class="price-note">Cloud, platform and model usage is billed to you directly by the provider, never marked up. Quoted prices exclude VAT and local taxes.</p>
         </div>
 
         <ol class="step-map" aria-label="The four steps">
@@ -197,28 +191,28 @@
             <a href="#assessment">
               <span class="step-map-num" aria-hidden="true">1</span>
               <span class="step-map-name">Assessment</span>
-              <span class="step-map-price"><span class="price" data-usd="4500" data-eur="4200" data-gbp="3600" data-aed="16500">$4,500</span></span>
+              <span class="step-map-price">Two weeks</span>
             </a>
           </li>
           <li>
             <a href="#pilots">
               <span class="step-map-num" aria-hidden="true">2</span>
               <span class="step-map-name">Pilot, one layer</span>
-              <span class="step-map-price">from <span class="price" data-usd="11000" data-eur="10000" data-gbp="8700" data-aed="40000">$11,000</span></span>
+              <span class="step-map-price">4&ndash;6 weeks</span>
             </a>
           </li>
           <li>
             <a href="#program">
               <span class="step-map-num" aria-hidden="true">3</span>
               <span class="step-map-name">End-to-end program</span>
-              <span class="step-map-price">from <span class="price" data-usd="58000" data-eur="53500" data-gbp="46000" data-aed="213000">$58,000</span></span>
+              <span class="step-map-price">3&ndash;6 months</span>
             </a>
           </li>
           <li>
             <a href="#retainers">
               <span class="step-map-num" aria-hidden="true">4</span>
               <span class="step-map-name">Run and improve</span>
-              <span class="step-map-price">from <span class="price" data-usd="2200" data-eur="2000" data-gbp="1750" data-aed="8000">$2,200</span> a month</span>
+              <span class="step-map-price">Monthly</span>
             </a>
           </li>
         </ol>
@@ -239,8 +233,7 @@
             </p>
 
             <div class="price-block">
-              <p class="price-big"><span class="price" data-usd="4500" data-eur="4200" data-gbp="3600" data-aed="16500">$4,500</span></p>
-              <p class="price-terms">Fixed fee. Two weeks. Credited in full against a pilot signed within 60 days.</p>
+              <p class="price-terms">Fixed fee, confirmed on a call. Two weeks. Credited in full against a pilot signed within 60 days.</p>
             </div>
 
             <a class="btn" href="/contact/">Book a discovery call</a>
@@ -298,7 +291,7 @@
             </ul>
             <p class="package-meta">
               <span>5–6 weeks</span>
-              <span>from <b class="price" data-usd="18000" data-eur="16500" data-gbp="14200" data-aed="66000">$18,000</b></span>
+              <span>Fixed price</span>
             </p>
           </article>
 
@@ -320,7 +313,7 @@
             </ul>
             <p class="package-meta">
               <span>4–5 weeks</span>
-              <span>from <b class="price" data-usd="14000" data-eur="13000" data-gbp="11000" data-aed="51500">$14,000</b></span>
+              <span>Fixed price</span>
             </p>
           </article>
 
@@ -342,7 +335,7 @@
             </ul>
             <p class="package-meta">
               <span>3–4 weeks</span>
-              <span>from <b class="price" data-usd="11000" data-eur="10000" data-gbp="8700" data-aed="40000">$11,000</b></span>
+              <span>Fixed price</span>
             </p>
           </article>
 
@@ -364,7 +357,7 @@
             </ul>
             <p class="package-meta">
               <span>4–6 weeks</span>
-              <span>from <b class="price" data-usd="16000" data-eur="15000" data-gbp="12800" data-aed="59000">$16,000</b></span>
+              <span>Fixed price</span>
             </p>
           </article>
         </div>
@@ -403,13 +396,12 @@
             released every two weeks. It costs 15% less than buying the same steps one at a time.
           </p>
           <div class="price-block price-block-invert">
-            <p class="price-big">from <span class="price" data-usd="58000" data-eur="53500" data-gbp="46000" data-aed="213000">$58,000</span></p>
-            <p class="price-terms">Paid in monthly milestones as each phase is delivered.</p>
+            <p class="price-terms">One fixed price for the agreed scope, paid in monthly milestones as each phase is delivered.</p>
           </div>
         </div>
 
         <div class="program-detail">
-          <h3>Included at the starting price</h3>
+          <h3>Included as standard</h3>
           <ul class="tick-list tick-list-invert">
             <li>A data foundation with up to three systems and one business area</li>
             <li>A single source of truth with up to 25 agreed metrics</li>
@@ -418,8 +410,7 @@
             <li>A monthly steering meeting with your leadership</li>
           </ul>
           <p class="program-extra">
-            Already live with us? Each additional agent costs from
-            <b class="price" data-usd="9500" data-eur="8800" data-gbp="7500" data-aed="35000">$9,500</b>,
+            Already live with us? Each additional agent costs considerably less than the first,
             because the groundwork is already in place.
           </p>
         </div>
@@ -442,7 +433,6 @@
         <div class="retainer-grid">
           <article class="retainer">
             <h3>Essential</h3>
-            <p class="retainer-price"><span class="price" data-usd="2200" data-eur="2000" data-gbp="1750" data-aed="8000">$2,200</span><span> a month</span></p>
             <p class="retainer-fit">After a single pilot.</p>
             <ul class="tick-list">
               <li>Monitoring of your pipelines and agents</li>
@@ -456,7 +446,6 @@
           <article class="retainer is-common">
             <p class="retainer-flag">Most common</p>
             <h3>Growth</h3>
-            <p class="retainer-price"><span class="price" data-usd="4500" data-eur="4200" data-gbp="3600" data-aed="16500">$4,500</span><span> a month</span></p>
             <p class="retainer-fit">After a program or several agents.</p>
             <ul class="tick-list">
               <li>Everything in Essential</li>
@@ -469,7 +458,6 @@
 
           <article class="retainer">
             <h3>Embedded</h3>
-            <p class="retainer-price"><span class="price" data-usd="8500" data-eur="7900" data-gbp="6700" data-aed="31000">$8,500</span><span> a month</span></p>
             <p class="retainer-fit">For a part-time data and AI team.</p>
             <ul class="tick-list">
               <li>Everything in Growth</li>
@@ -494,11 +482,12 @@
 
         <div class="faq-list">
           <details>
-            <summary>What does "from" mean?</summary>
+            <summary>Why aren't prices listed?</summary>
             <p>
-              It's the price for the scope listed under each package. If your situation needs more,
-              such as extra systems, more metrics or a phone line for a voice agent, we tell you the
-              fixed price after the assessment, before any work starts.
+              Because the honest number depends on how many systems are involved and what state the
+              data is in, and a figure on a page would be wrong for most readers. Tell us the shape
+              of it on a short call and we'll give you a fixed price for the scope, in writing,
+              before any work starts.
             </p>
           </details>
           <details>
