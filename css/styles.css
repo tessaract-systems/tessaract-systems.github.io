@@ -2011,3 +2011,20 @@ a { color: inherit; }
 @media (max-width: 760px) {
   .case-body { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* --------------------------------------------------------------------------
+   Work teaser on the home page. The carousel itself lives at /work/; these
+   are static cards, so .work-card's flex-basis is simply ignored in a grid.
+   -------------------------------------------------------------------------- */
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 1.8vw, 24px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 900px) { .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .work-grid { grid-template-columns: minmax(0, 1fr); } }

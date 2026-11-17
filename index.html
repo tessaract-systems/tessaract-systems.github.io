@@ -122,7 +122,7 @@
             &mdash; then the agents that run on top. One team, end to end, in your cloud.
           </p>
           <div class="hero-actions">
-            <a class="btn" href="#contact">Book a discovery call</a>
+            <a class="btn" href="/contact/">Book a discovery call</a>
             <a class="btn btn-ghost" href="#journey">See how it works</a>
           </div>
           <ul class="hero-proof">
@@ -371,25 +371,28 @@
 
         <div class="capability-grid">
           <article class="capability">
-            <h3>Generative AI &amp; agents</h3>
+            <h3>AI engineering &amp; automation</h3>
             <p>
-              Multi-agent systems, enterprise copilots, document intelligence, conversational and
-              real-time voice assistants, with retrieval, evaluation and guardrails built in.
+              Agents, RAG, voice assistants and document intelligence, with the evaluation and
+              guardrails that let them run unsupervised.
             </p>
+            <a class="start-link" href="/services/ai-engineering/">What we build</a>
           </article>
           <article class="capability">
-            <h3>Data engineering &amp; machine learning</h3>
+            <h3>Data engineering &amp; analytics</h3>
             <p>
-              Lakehouses and warehouses, streaming and batch pipelines, platform migrations,
-              semantic layers, forecasting and predictive models in production with MLOps.
+              Lakehouses, migrations with row-level parity, semantic layers and forecasting models
+              that stay accurate after launch.
             </p>
+            <a class="start-link" href="/services/data-engineering/">What we build</a>
           </article>
           <article class="capability">
             <h3>Software, cloud &amp; integration</h3>
             <p>
-              Custom applications, internal tools, APIs and customer portals, cloud architecture on
-              AWS, Azure and GCP, plus CRM, ERP and finance system integration.
+              The applications, APIs and CRM and ERP integrations that turn a model into something
+              the business can actually use.
             </p>
+            <a class="start-link" href="/services/software-cloud/">What we build</a>
           </article>
         </div>
 
@@ -536,361 +539,56 @@
          or removing a card needs no JS change. A card's filter group is
          its data-group value.
          ================================================================ -->
+    <!-- ================================================================
+         6. Work — three teasers. The full index and the detailed case
+            studies live at /work/; nothing here repeats their copy.
+         ================================================================ -->
     <section class="section portfolio" id="portfolio" aria-labelledby="portfolio-title">
       <div class="wrap">
-
-        <div class="portfolio-head">
-          <div class="section-head">
-            <p class="eyebrow">Selected work</p>
-            <h2 id="portfolio-title">Migrations, data platforms, ML models and a lot of AI agents.</h2>
-            <p>
-              Between us the team has re-platformed enterprise analytics estates, built lakehouses
-              and semantic layers, shipped machine learning that drives real planning decisions, and
-              delivered a long list of AI agents. Everything here runs in production.
-            </p>
-          </div>
-
-          <div class="carousel-nav">
-            <p class="carousel-count"><span data-carousel-current>01</span> / <span data-carousel-total>12</span></p>
-            <div class="carousel-buttons">
-              <button class="carousel-btn" type="button" data-carousel-prev aria-controls="work-track">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4 7 12l8 8"/></svg>
-                <span class="visually-hidden">Previous project</span>
-              </button>
-              <button class="carousel-btn" type="button" data-carousel-next aria-controls="work-track">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg>
-                <span class="visually-hidden">Next project</span>
-              </button>
-            </div>
-          </div>
+        <div class="section-head">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="portfolio-title">Migrations, data platforms, ML models and a lot of AI agents.</h2>
+          <p>
+            Between us the team has re-platformed enterprise analytics estates, shipped machine
+            learning that drives real planning decisions, and delivered a long list of agents.
+            Everything runs in production.
+          </p>
         </div>
 
-        <div class="work-filters" role="group" aria-label="Filter work by capability">
-          <button class="work-filter is-on" type="button" data-filter="all" aria-pressed="true">All work</button>
-          <button class="work-filter" type="button" data-filter="platform" aria-pressed="false">Data platforms</button>
-          <button class="work-filter" type="button" data-filter="analytics" aria-pressed="false">Analytics &amp; BI</button>
-          <button class="work-filter" type="button" data-filter="ml" aria-pressed="false">Machine learning</button>
-          <button class="work-filter" type="button" data-filter="agents" aria-pressed="false">AI agents</button>
-          <button class="work-filter" type="button" data-filter="integration" aria-pressed="false">Integration</button>
-        </div>
-
-        <div class="work-carousel" role="group" aria-roledescription="carousel" aria-label="Selected work">
-          <ul class="work-track" id="work-track" tabindex="0"
-              aria-label="Selected work, scroll horizontally for more">
-
-            <li class="work-card" data-group="platform">
-              <!-- <p class="work-stat"><b>00%</b><span>faster query performance</span></p> -->
-              <p class="work-tag"><span class="work-layer">Layer 1</span> Platform migration</p>
-              <h3>Synapse to Databricks, migrated with row-level parity</h3>
-              <p class="work-body">
-                An enterprise analytics estate re-platformed onto a Databricks lakehouse. Old and
-                new ran side by side until every figure reconciled and the business signed the
-                cutover.
-              </p>
-              <ul class="work-stack">
-                <li>Databricks</li><li>Delta Lake</li><li>Unity Catalog</li><li>PySpark</li><li>Azure</li>
-              </ul>
-            </li>
-
-            <li class="work-card" data-group="platform">
-              <!-- <p class="work-stat"><b>00×</b><span>fresher operational data</span></p> -->
-              <p class="work-tag"><span class="work-layer">Layer 1</span> Streaming &amp; ingestion</p>
-              <h3>Operations data that is minutes old, not a day old</h3>
-              <p class="work-body">
-                Overnight batch loads replaced with streaming ingestion, plus schema evolution,
-                replay and quality gates, so a bad upstream change fails loudly instead of quietly
-                corrupting the reports.
-              </p>
-              <ul class="work-stack">
-                <li>Structured Streaming</li><li>Kafka</li><li>Delta Live Tables</li><li>Data quality gates</li>
-              </ul>
-            </li>
-
-            <li class="work-card" data-group="platform">
-              <!-- <p class="work-stat"><b>00%</b><span>lower platform spend</span></p> -->
-              <p class="work-tag"><span class="work-layer">Layer 1</span> Cloud architecture</p>
-              <h3>A lakehouse where every team can see what it costs</h3>
-              <p class="work-body">
-                Built from the ground up, then tuned: right-sized compute, job clusters over
-                always-on warehouses, compaction on the hot tables, and spend broken out per team.
-              </p>
-              <ul class="work-stack">
-                <li>Lakehouse architecture</li><li>Terraform</li><li>Cost governance</li><li>AWS / Azure</li>
-              </ul>
-            </li>
-
-            <li class="work-card is-featured" data-group="analytics">
-              <!-- <p class="work-stat"><b>00</b><span>certified metrics, one definition each</span></p> -->
-              <p class="work-tag"><span class="work-layer">Layer 2</span> Talk to your data</p>
-              <h3>C-level answers in plain English, from certified metrics</h3>
-              <p class="work-body">
-                A governed semantic model where every executive metric is defined once and owned by
-                a named person, with a natural-language layer on top that shows its workings beside
-                every answer.
-              </p>
-              <ul class="work-stack">
-                <li>Semantic layer</li><li>Power BI</li><li>dbt</li><li>Text-to-SQL</li><li>RAG</li>
-              </ul>
-            </li>
-
-            <li class="work-card" data-group="analytics">
-              <!-- <p class="work-stat"><b>00 days</b><span>off the month-end close</span></p> -->
-              <p class="work-tag"><span class="work-layer">Layer 2</span> Finance reporting</p>
-              <h3>Board reporting that drills to the source transaction</h3>
-              <p class="work-body">
-                Dozens of spreadsheets consolidated into one governed layer covering financial
-                close, margin analysis and operational KPIs, with drill-through all the way down.
-              </p>
-              <ul class="work-stack">
-                <li>Dimensional modeling</li><li>Power BI</li><li>SQL</li><li>ERP integration</li>
-              </ul>
-            </li>
-
-            <li class="work-card" data-group="ml">
-              <!-- <p class="work-stat"><b>00%</b><span>lower forecast error</span></p> -->
-              <p class="work-tag"><span class="work-layer">Layer 3</span> Retail · forecasting</p>
-              <h3>Demand forecasts that feed planning, not a notebook</h3>
-              <p class="work-body">
-                SKU and store level forecasting across seasonality, promotions and pricing, retrained
-                on a schedule and monitored for drift, delivered straight into replenishment.
-              </p>
-              <ul class="work-stack">
-                <li>Databricks</li><li>MLflow</li><li>Gradient boosting</li><li>Time series</li><li>Python</li>
-              </ul>
-            </li>
-
-            <li class="work-card" data-group="ml">
-              <!-- <p class="work-stat"><b>00%</b><span>fewer false alerts</span></p> -->
-              <p class="work-tag"><span class="work-layer">Layer 3</span> Predictive monitoring</p>
-              <h3>Anomaly alerts people actually act on</h3>
-              <p class="work-body">
-                Models watching operational and financial data for unusual transactions, process
-                drift and silent pipeline failures, tuned hard against alert fatigue.
-              </p>
-              <ul class="work-stack">
-                <li>Anomaly detection</li><li>Feature engineering</li><li>Model monitoring</li><li>Alerting</li>
-              </ul>
-            </li>
-
-            <li class="work-card is-featured" data-group="agents">
-              <!-- <p class="work-stat"><b>00%</b><span>of tickets resolved without a human</span></p> -->
-              <p class="work-tag"><span class="work-layer">Layer 4</span> Multi-agent system</p>
-              <h3>Routine support resolved, edge cases escalated with context</h3>
-              <p class="work-body">
-                A router, retrieval agents grounded in product and policy docs, an order agent wired
-                to back-office systems, and a supervisor that checks every answer before it is sent.
-              </p>
-              <ul class="work-stack">
-                <li>Multi-agent orchestration</li><li>LangGraph</li><li>RAG</li><li>MCP</li><li>Evals</li>
-              </ul>
-            </li>
-
-            <li class="work-card is-featured" data-group="agents">
-              <!-- <p class="work-stat"><b>00%</b><span>of calls handled end to end</span></p> -->
-              <p class="work-tag"><span class="work-layer">Layer 4</span> Voice AI</p>
-              <h3>An AI assistant that answers the phone and holds the call</h3>
-              <p class="work-body">
-                Speech in, live lookups against ticketing and account systems, natural speech back
-                with barge-in, and a warm transfer the moment the caller asks or confidence drops.
-              </p>
-              <ul class="work-stack">
-                <li>Realtime voice</li><li>STT / TTS</li><li>Telephony / SIP</li><li>Function calling</li><li>Call analytics</li>
-              </ul>
-            </li>
-
-            <li class="work-card is-featured" data-group="agents">
-              <!-- <p class="work-stat"><b>00k</b><span>documents searchable by every team</span></p> -->
-              <p class="work-tag"><span class="work-layer">Layer 4</span> Enterprise copilot</p>
-              <h3>Answers with citations, and only what you may see</h3>
-              <p class="work-body">
-                A copilot over policies, SOPs, contracts and wikis that cites the source paragraph
-                and inherits each person's existing permissions, so nothing leaks through the
-                assistant.
-              </p>
-              <ul class="work-stack">
-                <li>RAG</li><li>Vector search</li><li>Permission-aware retrieval</li><li>Citations</li>
-              </ul>
-            </li>
-
-            <li class="work-card is-featured" data-group="agents">
-              <!-- <p class="work-stat"><b>00%</b><span>of invoices posted automatically</span></p> -->
-              <p class="work-tag"><span class="work-layer">Layer 4</span> Document agents</p>
-              <h3>Invoices matched and posted, exceptions routed with evidence</h3>
-              <p class="work-body">
-                Agents read invoices and purchase orders, match them against ERP records, post the
-                confident ones, and hand the rest to a person with the extracted evidence attached.
-              </p>
-              <ul class="work-stack">
-                <li>Document AI</li><li>OCR</li><li>LLM extraction</li><li>ERP APIs</li><li>Human in the loop</li>
-              </ul>
-            </li>
-
-            <li class="work-card" data-group="integration">
-              <!-- <p class="work-stat"><b>00</b><span>systems kept in step</span></p> -->
-              <p class="work-tag"><span class="work-layer">All layers</span> Systems integration</p>
-              <h3>ERP, CRM and finance in step without anyone rekeying</h3>
-              <p class="work-body">
-                Idempotent syncs, reconciliation reporting and alerting when two systems disagree.
-                The unglamorous layer that decides whether everything above it can be trusted.
-              </p>
-              <ul class="work-stack">
-                <li>NetSuite</li><li>Salesforce</li><li>REST / SOAP APIs</li><li>Event-driven sync</li><li>Python</li>
-              </ul>
-            </li>
-
-          </ul>
-
-          <p class="carousel-progress" aria-hidden="true"><span class="carousel-progress-bar"></span></p>
-          <p class="work-empty" hidden>Nothing in this category yet.</p>
-        </div>
+        <ul class="work-grid">
+          <li class="work-card">
+            <p class="work-tag"><span class="work-layer">Layer 1</span> Platform migration</p>
+            <h3>An analytics estate moved to a lakehouse without losing the finance team's trust</h3>
+            <ul class="work-stack"><li>Databricks</li><li>Delta Lake</li><li>Unity Catalog</li></ul>
+          </li>
+          <li class="work-card">
+            <p class="work-tag"><span class="work-layer">Layer 4</span> AI agents</p>
+            <h3>A multi-agent system that drafts and checks first-line support replies</h3>
+            <ul class="work-stack"><li>LangGraph</li><li>pgvector</li><li>Python</li></ul>
+          </li>
+          <li class="work-card">
+            <p class="work-tag"><span class="work-layer">Layer 2</span> Semantics &amp; BI</p>
+            <h3>One governed definition per metric, with a chat interface on top of it</h3>
+            <ul class="work-stack"><li>dbt Semantic Layer</li><li>Snowflake</li><li>Power BI</li></ul>
+          </li>
+        </ul>
 
         <p class="work-note">
           Client names and figures stay confidential unless the client has agreed to publish them.
-          We'll walk you through the architecture and the numbers on any of these on a call, under
-          NDA if you'd prefer.
-          <a class="engage-more" href="/work/">Read five of these in detail</a>
+          <a class="engage-more" href="/work/">Read five projects in detail</a>
         </p>
       </div>
     </section>
 
-    <!-- ================================================================
-         7. Your stack
-         ================================================================ -->
-    <section class="section your-stack" id="your-stack" aria-labelledby="stack-title">
-      <div class="wrap stack-grid">
-        <div class="section-head">
-          <p class="eyebrow">Your stack</p>
-          <h2 id="stack-title">Your stack, not ours</h2>
-          <p>
-            We're platform and language agnostic. We don't resell licenses or push a favorite vendor.
-            We build on what you already run, and when you do need something new, we recommend it
-            on merit.
-          </p>
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="wrap cta-band-inner">
+        <div>
+          <h2 id="cta-title">Start with a 30-minute call.</h2>
+          <p>Tell us what you're trying to get working and we'll tell you which layer is in the way.</p>
         </div>
-        <dl class="tool-list">
-          <div><dt>Data platforms</dt><dd>Databricks, Snowflake, Microsoft Fabric, Google BigQuery, Amazon Redshift, PostgreSQL</dd></div>
-          <div><dt>Semantics</dt><dd>dbt Semantic Layer, Cube, Power BI semantic models, LookML, Unity Catalog</dd></div>
-          <div><dt>AI models</dt><dd>OpenAI, Anthropic, Google Gemini, Mistral, Llama, Azure OpenAI, Amazon Bedrock</dd></div>
-          <div><dt>Agent frameworks</dt><dd>LangGraph, OpenAI Agents SDK, Semantic Kernel, Model Context Protocol</dd></div>
-          <div><dt>Languages</dt><dd>Python, SQL, TypeScript, C# and .NET, Java, Scala</dd></div>
-          <div><dt>Clouds</dt><dd>AWS, Microsoft Azure, Google Cloud, hybrid and on-premises</dd></div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- ================================================================
-         8. Principles
-         ================================================================ -->
-    <section class="section principles" id="principles" aria-labelledby="principles-title">
-      <div class="wrap principles-grid">
-        <div class="section-head">
-          <p class="eyebrow eyebrow-invert">How we work</p>
-          <h2 id="principles-title">What you can expect from us</h2>
-          <p>Four commitments we'll put in the statement of work, not just on a website.</p>
-        </div>
-        <dl class="principle-list">
-          <div>
-            <dt>Production, not pilots</dt>
-            <dd>We scope every project to reach real users. A demo that never ships doesn't count as done.</dd>
-          </div>
-          <div>
-            <dt>Measured outcomes</dt>
-            <dd>We agree a baseline and a target before we build, and report against it as we go.</dd>
-          </div>
-          <div>
-            <dt>Your data stays yours</dt>
-            <dd>We build in your cloud, under your security policies, with models chosen for your risk profile.</dd>
-          </div>
-          <div>
-            <dt>No lock-in</dt>
-            <dd>You own the code, the documentation and the know-how. Your team can run it without us.</dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- ================================================================
-         9. Contact
-         ================================================================ -->
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div class="wrap contact-grid">
-        <div class="contact-copy">
-          <p class="eyebrow eyebrow-invert">Next step</p>
-          <h2 id="contact-title">Tell us where you are on the journey.</h2>
-          <p>
-            A 30-minute call is enough to see where you should start and what the first result
-            could be. If we're not the right fit, we'll say so on the call rather than sell you
-            a project.
-          </p>
-          <ul class="contact-list">
-            <li>No slide deck and no sales engineer, just the engineers who would build it</li>
-            <li>You leave with a recommended starting layer and a rough shape of the work</li>
-            <li>Whatever you share stays confidential, and we'll sign your NDA if you have one</li>
-          </ul>
-          <p class="contact-direct">
-            Prefer email? Write to
-            <a href="mailto:info.tessaractsystems@gmail.com">info.tessaractsystems@gmail.com</a>
-            and we'll reply within one business day.
-          </p>
-        </div>
-
-        <div class="contact-panel">
-          <h3>Book a discovery call</h3>
-          <p>Pick a time directly, or send a message and we'll come back with options.</p>
-
-          <!-- Replace with your real scheduling link (Cal.com or Calendly).
-               Until it exists, this button scrolls to the form. -->
-          <p class="panel-cta">
-            <a class="btn btn-light" id="book-link" href="#f-name" data-booking="">Choose a time</a>
-          </p>
-
-          <p class="panel-divider"><span>or send a message</span></p>
-
-          <form class="contact-form" id="contact-form" method="post"
-                action="https://api.web3forms.com/submit" novalidate>
-            <!-- Web3Forms access key. Public by design: it only permits
-                 submissions to the address it was registered with. -->
-            <input type="hidden" name="access_key" value="98857ebb-45d0-4898-80d8-465d72977e12">
-            <input type="hidden" name="subject" value="New enquiry from tessaractsystems.com">
-            <input type="hidden" name="from_name" value="Tessaract Systems website">
-
-            <div class="hp-field" aria-hidden="true">
-              <label for="f-botcheck">Leave this field empty</label>
-              <input id="f-botcheck" type="text" name="botcheck" tabindex="-1" autocomplete="off">
-            </div>
-
-            <div class="field">
-              <label for="f-name">Name</label>
-              <input id="f-name" name="name" type="text" autocomplete="name" required>
-            </div>
-            <div class="field">
-              <label for="f-email">Work email</label>
-              <input id="f-email" name="email" type="email" autocomplete="email" required>
-            </div>
-            <div class="field">
-              <label for="f-company">Company</label>
-              <input id="f-company" name="company" type="text" autocomplete="organization">
-            </div>
-            <div class="field">
-              <label for="f-stage">Where are you on the journey?</label>
-              <select id="f-stage" name="stage">
-                <option value="">Not sure yet</option>
-                <option>Our data lives in many systems</option>
-                <option>We have a platform, but the numbers don't agree</option>
-                <option>Our AI pilots never reach production</option>
-                <option>Our data is ready and we want results</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="f-message">What would you like help with?</label>
-              <textarea id="f-message" name="message" rows="4" required
-                        placeholder="The process, report or decision that costs you the most time right now."></textarea>
-            </div>
-
-            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-            <button class="btn btn-light" type="submit">Send message</button>
-            <p class="form-small">We only use your details to reply. No lists, no newsletters.</p>
-          </form>
+        <div class="cta-band-actions">
+          <a class="btn btn-light" href="/contact/">Book a discovery call</a>
+          <a class="cta-band-mail" href="mailto:info.tessaractsystems@gmail.com">info.tessaractsystems@gmail.com</a>
         </div>
       </div>
     </section>
