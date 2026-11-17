@@ -1935,3 +1935,79 @@ a { color: inherit; }
     transition-delay: 0s !important;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Case studies  (/work/)
+   -------------------------------------------------------------------------- */
+
+.cases .section-head { margin-bottom: clamp(32px, 4vw, 52px); }
+
+.case {
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  padding: clamp(24px, 3.2vw, 40px);
+}
+
+.case + .case { margin-top: clamp(20px, 2.4vw, 32px); }
+
+.case > h3 {
+  margin: 10px 0 0;
+  font-size: clamp(1.25rem, 1.9vw, 1.6rem);
+  line-height: 1.22;
+  letter-spacing: -.012em;
+  text-wrap: balance;
+  max-width: 24em;
+}
+
+.case-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 2.6vw, 36px);
+  margin-top: clamp(22px, 2.6vw, 32px);
+}
+
+.case-body h4 {
+  margin: 0 0 7px;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--signal-deep);
+}
+
+.case-body p {
+  margin: 0;
+  font-size: .9688rem;
+  line-height: 1.62;
+  color: var(--graphite);
+  text-wrap: pretty;
+}
+
+/* Only rendered once a real, client-approved figure exists. */
+.case-metric {
+  margin-top: 14px !important;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.case-metric b {
+  font-size: 1.75rem;
+  line-height: 1;
+  letter-spacing: -.02em;
+  color: var(--ink);
+}
+
+.case-metric span { font-size: .8125rem; color: var(--graphite); }
+
+.case .work-stack {
+  margin-top: clamp(22px, 2.6vw, 32px);
+  padding-top: clamp(18px, 2vw, 24px);
+  border-top: 1px solid var(--rule);
+}
+
+@media (max-width: 760px) {
+  .case-body { grid-template-columns: minmax(0, 1fr); }
+}

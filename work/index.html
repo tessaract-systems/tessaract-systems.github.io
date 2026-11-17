@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Work — Data, ML and AI Agent Case Studies | Tessaract Systems</title>
+  <meta name="description" content="Five projects in detail: a Databricks migration with row-level parity, retail demand forecasting, a multi-agent support system and a voice help desk agent.">
+
+  <link rel="canonical" href="https://tessaractsystems.com/work/">
+
+  <meta name="theme-color" content="#FAFAFA">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tessaract Systems">
+  <meta property="og:url" content="https://tessaractsystems.com/work/">
+  <meta property="og:title" content="Work — Tessaract Systems">
+  <meta property="og:description" content="Five projects in detail, plus the full index of migrations, data platforms, ML models and AI agents the team has delivered.">
+  <meta property="og:image" content="https://tessaractsystems.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tessaract Systems">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Work — Tessaract Systems">
+  <meta name="twitter:description" content="Five projects in detail, plus the full index of migrations, data platforms, ML models and AI agents the team has delivered.">
+  <meta name="twitter:image" content="https://tessaractsystems.com/assets/og-image.png">
+
+  <link rel="icon" type="image/png" href="/assets/favicon-64.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+  <link rel="preload" href="/assets/fonts/Traceform-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Privacy-friendly analytics. Uncomment once an account exists.
+  <script defer data-domain="tessaractsystems.com" src="https://plausible.io/js/script.js"></script>
+  -->
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://tessaractsystems.com/"},
+    {"@type":"ListItem","position":2,"name":"Work","item":"https://tessaractsystems.com/work/"}
+    ]
+  }
+  </script>
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Tessaract Systems, home">
+        <svg class="brand-mark" viewBox="0 0 773 767" aria-hidden="true">
+          <path d="M388 62 L742 262 L388 462 L34 262 Z"/>
+          <path d="M196 418 L34 508 L388 706 L742 508 L580 418"/>
+        </svg>
+        <span class="brand-word"><span class="brand-name">Tessaract</span><span class="brand-sub"><span>Systems</span></span></span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bar"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="/services/">Services</a>
+        <a href="/work/" aria-current="page">Work</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/about/">About</a>
+        <a class="btn btn-small" href="/contact/">Book a call</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="wrap page-hero-grid">
+        <div>
+          <p class="eyebrow">Work</p>
+          <h1>Migrations, data platforms, ML models and a lot of AI agents.</h1>
+          <p class="lede">
+            Between us the team has re-platformed enterprise analytics estates, built lakehouses and
+            semantic layers, shipped machine learning that drives real planning decisions, and
+            delivered a long list of AI agents. Everything here runs in production.
+          </p>
+          <p class="hero-actions">
+            <a class="btn" href="/contact/">Discuss a similar project</a>
+            <a class="btn btn-ghost" href="/services/">See services</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cases" aria-labelledby="cases-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Case studies</p>
+          <h2 id="cases-title">Five projects, in detail</h2>
+          <p>
+            Client names are withheld under the confidentiality terms we work to. The problems, the
+            architecture and the decisions are described as they happened.
+          </p>
+        </div>
+
+        <article class="case" id="case-1">
+          <p class="work-tag"><span class="work-layer">Case 01</span> Platform migration</p>
+          <h3>Synapse to Databricks, migrated with row-level parity</h3>
+          <div class="case-body">
+            <div>
+              <h4>The problem</h4>
+              <p>An enterprise analytics estate had outgrown Azure Synapse. Query times were rising, costs were unpredictable, and the finance team had quietly started rebuilding numbers in spreadsheets because they no longer trusted the reports.</p>
+            </div>
+            <div>
+              <h4>What we built</h4>
+              <p>A Databricks lakehouse built alongside the existing estate rather than in place of it. Ingestion was rebuilt on Delta Lake with explicit schema contracts, the transformation logic was ported in dependency order, and Unity Catalog took over access control that had previously lived in a spreadsheet of its own.</p>
+            </div>
+            <div>
+              <h4>How it works</h4>
+              <p>Both platforms ran in parallel for the whole migration. A reconciliation harness compared outputs row by row on every scheduled run and raised a ticket for each mismatch, so the differences were explained rather than averaged away. The business signed off the cutover only once the harness had been clean for a full reporting cycle.</p>
+            </div>
+            <div>
+              <h4>Where it got to</h4>
+              <p>Reporting moved onto a single platform with the lineage and access control that the old estate never had, and the parallel run meant nobody was asked to trust the new numbers on faith.</p>
+              <!-- When you have a client-approved figure for this project, put it here:
+                   <p class="case-metric"><b>00%</b> <span>what it measures</span></p>
+                   Nothing goes in until it is real and you are allowed to publish it. -->
+            </div>
+          </div>
+          <ul class="work-stack"><li>Databricks</li><li>Delta Lake</li><li>Unity Catalog</li><li>PySpark</li><li>dbt</li><li>Azure</li><li>Power BI</li></ul>
+        </article>
+
+        <article class="case" id="case-2">
+          <p class="work-tag"><span class="work-layer">Case 02</span> Machine learning</p>
+          <h3>Demand forecasting that planners actually use</h3>
+          <div class="case-body">
+            <div>
+              <h4>The problem</h4>
+              <p>A retail group planned stock from a mix of last year's figures and experience. Fast-moving lines ran out, slow lines were over-ordered, and every planner had their own private adjustments nobody else could see.</p>
+            </div>
+            <div>
+              <h4>What we built</h4>
+              <p>Forecasting models at SKU and location level, trained on sales history with promotions, seasonality, price changes and calendar effects as explicit features. Planner overrides were made a first-class part of the system: captured, attributed and fed back into evaluation rather than applied invisibly in a spreadsheet.</p>
+            </div>
+            <div>
+              <h4>How it works</h4>
+              <p>Models retrain on a schedule and are scored against a rolling holdout, with accuracy tracked per category so drift surfaces where it happens instead of being hidden in a global average. Forecasts are written back into the planning system the team already used, so adoption did not depend on anyone learning a new tool.</p>
+            </div>
+            <div>
+              <h4>Where it got to</h4>
+              <p>Planners work from a forecast they can interrogate and correct, and the corrections became a measurable signal rather than invisible local knowledge.</p>
+              <!-- When you have a client-approved figure for this project, put it here:
+                   <p class="case-metric"><b>00%</b> <span>what it measures</span></p>
+                   Nothing goes in until it is real and you are allowed to publish it. -->
+            </div>
+          </div>
+          <ul class="work-stack"><li>Python</li><li>MLflow</li><li>Databricks</li><li>Prophet</li><li>LightGBM</li><li>Delta Lake</li><li>Power BI</li></ul>
+        </article>
+
+        <article class="case" id="case-3">
+          <p class="work-tag"><span class="work-layer">Case 03</span> AI agents</p>
+          <h3>A multi-agent system handling first-line customer support</h3>
+          <div class="case-body">
+            <div>
+              <h4>The problem</h4>
+              <p>Support volume was growing faster than headcount. The team's own analysis showed most tickets were variations on a small set of questions, but each still needed a human to read the history, check an order and write a reply.</p>
+            </div>
+            <div>
+              <h4>What we built</h4>
+              <p>A multi-agent system where each agent owns one job &mdash; classify the request, retrieve the relevant policy and order history, draft the reply, and check it before it is sent. An explicit escalation path hands anything involving refunds, complaints or unusual sentiment to a person, with the context already gathered.</p>
+            </div>
+            <div>
+              <h4>How it works</h4>
+              <p>Retrieval runs over the help centre, past resolved tickets and the order system, and every answer cites its source so an agent can be audited after the fact. A graded question set built from real historical tickets scores every prompt and model change before it ships. Each tool call is traced and costed.</p>
+            </div>
+            <div>
+              <h4>Where it got to</h4>
+              <p>First-line responses are drafted and checked automatically, with humans spending their time on the cases that genuinely need judgement.</p>
+              <!-- When you have a client-approved figure for this project, put it here:
+                   <p class="case-metric"><b>00%</b> <span>what it measures</span></p>
+                   Nothing goes in until it is real and you are allowed to publish it. -->
+            </div>
+          </div>
+          <ul class="work-stack"><li>LangGraph</li><li>OpenAI</li><li>Anthropic</li><li>pgvector</li><li>Python</li><li>Zendesk API</li><li>FastAPI</li></ul>
+        </article>
+
+        <article class="case" id="case-4">
+          <p class="work-tag"><span class="work-layer">Case 04</span> Voice AI</p>
+          <h3>A voice assistant that answers the help desk line</h3>
+          <div class="case-body">
+            <div>
+              <h4>The problem</h4>
+              <p>A help desk lost most of its calls to hold time. Out of hours there was no answer at all, and the voicemail backlog was handled the next morning by the same people who were already behind.</p>
+            </div>
+            <div>
+              <h4>What we built</h4>
+              <p>A voice assistant that answers the phone, holds a real conversation at human latency, handles interruption and background noise, resolves the common requests end to end, and transfers everything else to a person with a summary already attached.</p>
+            </div>
+            <div>
+              <h4>How it works</h4>
+              <p>Speech-to-speech handling keeps latency inside the window where a conversation still feels natural, which is the difference between a system people use and one they talk over. The assistant is bounded to a defined set of actions it may take unattended; anything outside that set becomes a transfer. Every call is transcribed, scored and reviewable.</p>
+            </div>
+            <div>
+              <h4>Where it got to</h4>
+              <p>The line is answered immediately, including out of hours, and calls arrive at a human already triaged rather than cold.</p>
+              <!-- When you have a client-approved figure for this project, put it here:
+                   <p class="case-metric"><b>00%</b> <span>what it measures</span></p>
+                   Nothing goes in until it is real and you are allowed to publish it. -->
+            </div>
+          </div>
+          <ul class="work-stack"><li>Realtime speech APIs</li><li>Twilio</li><li>Python</li><li>LangGraph</li><li>PostgreSQL</li><li>Webhooks</li></ul>
+        </article>
+
+        <article class="case" id="case-5">
+          <p class="work-tag"><span class="work-layer">Case 05</span> Semantics &amp; BI</p>
+          <h3>One definition of every metric, and a chat interface on top</h3>
+          <div class="case-body">
+            <div>
+              <h4>The problem</h4>
+              <p>Two dashboards disagreed about revenue in a board meeting. The underlying cause was four different definitions of the same metric, each correct in its own context and none of them written down anywhere.</p>
+            </div>
+            <div>
+              <h4>What we built</h4>
+              <p>A governed semantic layer holding one definition per metric, with the business owner of each definition named. Every BI tool reads from it, so a number cannot be quietly redefined inside a single report. On top of it, a natural-language interface that answers executive questions against those same definitions.</p>
+            </div>
+            <div>
+              <h4>How it works</h4>
+              <p>The chat interface is deliberately constrained to the semantic layer rather than turned loose on raw tables. It generates queries against governed metrics only, which is what makes the answers reproducible &mdash; ask the same question twice and the number is the same, and it matches the dashboard.</p>
+            </div>
+            <div>
+              <h4>Where it got to</h4>
+              <p>Metric definitions became a governed asset with named owners, and executives can ask questions directly without the answer drifting from the reported figure.</p>
+              <!-- When you have a client-approved figure for this project, put it here:
+                   <p class="case-metric"><b>00%</b> <span>what it measures</span></p>
+                   Nothing goes in until it is real and you are allowed to publish it. -->
+            </div>
+          </div>
+          <ul class="work-stack"><li>dbt Semantic Layer</li><li>Snowflake</li><li>Power BI</li><li>Python</li><li>OpenAI</li><li>Unity Catalog</li></ul>
+        </article>
+
+      </div>
+    </section>
+    <section class="section portfolio" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="wrap">
+
+        <div class="portfolio-head">
+          <div class="section-head">
+            <p class="eyebrow">Selected work</p>
+            <h2 id="portfolio-title">Every project, filterable by capability.</h2>
+            <p>
+              Between us the team has re-platformed enterprise analytics estates, built lakehouses
+              and semantic layers, shipped machine learning that drives real planning decisions, and
+              delivered a long list of AI agents. Everything here runs in production.
+            </p>
+          </div>
+
+          <div class="carousel-nav">
+            <p class="carousel-count"><span data-carousel-current>01</span> / <span data-carousel-total>12</span></p>
+            <div class="carousel-buttons">
+              <button class="carousel-btn" type="button" data-carousel-prev aria-controls="work-track">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4 7 12l8 8"/></svg>
+                <span class="visually-hidden">Previous project</span>
+              </button>
+              <button class="carousel-btn" type="button" data-carousel-next aria-controls="work-track">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg>
+                <span class="visually-hidden">Next project</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-filters" role="group" aria-label="Filter work by capability">
+          <button class="work-filter is-on" type="button" data-filter="all" aria-pressed="true">All work</button>
+          <button class="work-filter" type="button" data-filter="platform" aria-pressed="false">Data platforms</button>
+          <button class="work-filter" type="button" data-filter="analytics" aria-pressed="false">Analytics &amp; BI</button>
+          <button class="work-filter" type="button" data-filter="ml" aria-pressed="false">Machine learning</button>
+          <button class="work-filter" type="button" data-filter="agents" aria-pressed="false">AI agents</button>
+          <button class="work-filter" type="button" data-filter="integration" aria-pressed="false">Integration</button>
+        </div>
+
+        <div class="work-carousel" role="group" aria-roledescription="carousel" aria-label="Selected work">
+          <ul class="work-track" id="work-track" tabindex="0"
+              aria-label="Selected work, scroll horizontally for more">
+
+            <li class="work-card" data-group="platform">
+              <!-- <p class="work-stat"><b>00%</b><span>faster query performance</span></p> -->
+              <p class="work-tag"><span class="work-layer">Layer 1</span> Platform migration</p>
+              <h3>Synapse to Databricks, migrated with row-level parity</h3>
+              <p class="work-body">
+                An enterprise analytics estate re-platformed onto a Databricks lakehouse. Old and
+                new ran side by side until every figure reconciled and the business signed the
+                cutover.
+              </p>
+              <ul class="work-stack">
+                <li>Databricks</li><li>Delta Lake</li><li>Unity Catalog</li><li>PySpark</li><li>Azure</li>
+              </ul>
+            </li>
+
+            <li class="work-card" data-group="platform">
+              <!-- <p class="work-stat"><b>00×</b><span>fresher operational data</span></p> -->
+              <p class="work-tag"><span class="work-layer">Layer 1</span> Streaming &amp; ingestion</p>
+              <h3>Operations data that is minutes old, not a day old</h3>
+              <p class="work-body">
+                Overnight batch loads replaced with streaming ingestion, plus schema evolution,
+                replay and quality gates, so a bad upstream change fails loudly instead of quietly
+                corrupting the reports.
+              </p>
+              <ul class="work-stack">
+                <li>Structured Streaming</li><li>Kafka</li><li>Delta Live Tables</li><li>Data quality gates</li>
+              </ul>
+            </li>
+
+            <li class="work-card" data-group="platform">
+              <!-- <p class="work-stat"><b>00%</b><span>lower platform spend</span></p> -->
+              <p class="work-tag"><span class="work-layer">Layer 1</span> Cloud architecture</p>
+              <h3>A lakehouse where every team can see what it costs</h3>
+              <p class="work-body">
+                Built from the ground up, then tuned: right-sized compute, job clusters over
+                always-on warehouses, compaction on the hot tables, and spend broken out per team.
+              </p>
+              <ul class="work-stack">
+                <li>Lakehouse architecture</li><li>Terraform</li><li>Cost governance</li><li>AWS / Azure</li>
+              </ul>
+            </li>
+
+            <li class="work-card is-featured" data-group="analytics">
+              <!-- <p class="work-stat"><b>00</b><span>certified metrics, one definition each</span></p> -->
+              <p class="work-tag"><span class="work-layer">Layer 2</span> Talk to your data</p>
+              <h3>C-level answers in plain English, from certified metrics</h3>
+              <p class="work-body">
+                A governed semantic model where every executive metric is defined once and owned by
+                a named person, with a natural-language layer on top that shows its workings beside
+                every answer.
+              </p>
+              <ul class="work-stack">
+                <li>Semantic layer</li><li>Power BI</li><li>dbt</li><li>Text-to-SQL</li><li>RAG</li>
+              </ul>
+            </li>
+
+            <li class="work-card" data-group="analytics">
+              <!-- <p class="work-stat"><b>00 days</b><span>off the month-end close</span></p> -->
+              <p class="work-tag"><span class="work-layer">Layer 2</span> Finance reporting</p>
+              <h3>Board reporting that drills to the source transaction</h3>
+              <p class="work-body">
+                Dozens of spreadsheets consolidated into one governed layer covering financial
+                close, margin analysis and operational KPIs, with drill-through all the way down.
+              </p>
+              <ul class="work-stack">
+                <li>Dimensional modeling</li><li>Power BI</li><li>SQL</li><li>ERP integration</li>
+              </ul>
+            </li>
+
+            <li class="work-card" data-group="ml">
+              <!-- <p class="work-stat"><b>00%</b><span>lower forecast error</span></p> -->
+              <p class="work-tag"><span class="work-layer">Layer 3</span> Retail · forecasting</p>
+              <h3>Demand forecasts that feed planning, not a notebook</h3>
+              <p class="work-body">
+                SKU and store level forecasting across seasonality, promotions and pricing, retrained
+                on a schedule and monitored for drift, delivered straight into replenishment.
+              </p>
+              <ul class="work-stack">
+                <li>Databricks</li><li>MLflow</li><li>Gradient boosting</li><li>Time series</li><li>Python</li>
+              </ul>
+            </li>
+
+            <li class="work-card" data-group="ml">
+              <!-- <p class="work-stat"><b>00%</b><span>fewer false alerts</span></p> -->
+              <p class="work-tag"><span class="work-layer">Layer 3</span> Predictive monitoring</p>
+              <h3>Anomaly alerts people actually act on</h3>
+              <p class="work-body">
+                Models watching operational and financial data for unusual transactions, process
+                drift and silent pipeline failures, tuned hard against alert fatigue.
+              </p>
+              <ul class="work-stack">
+                <li>Anomaly detection</li><li>Feature engineering</li><li>Model monitoring</li><li>Alerting</li>
+              </ul>
+            </li>
+
+            <li class="work-card is-featured" data-group="agents">
+              <!-- <p class="work-stat"><b>00%</b><span>of tickets resolved without a human</span></p> -->
+              <p class="work-tag"><span class="work-layer">Layer 4</span> Multi-agent system</p>
+              <h3>Routine support resolved, edge cases escalated with context</h3>
+              <p class="work-body">
+                A router, retrieval agents grounded in product and policy docs, an order agent wired
+                to back-office systems, and a supervisor that checks every answer before it is sent.
+              </p>
+              <ul class="work-stack">
+                <li>Multi-agent orchestration</li><li>LangGraph</li><li>RAG</li><li>MCP</li><li>Evals</li>
+              </ul>
+            </li>
+
+            <li class="work-card is-featured" data-group="agents">
+              <!-- <p class="work-stat"><b>00%</b><span>of calls handled end to end</span></p> -->
+              <p class="work-tag"><span class="work-layer">Layer 4</span> Voice AI</p>
+              <h3>An AI assistant that answers the phone and holds the call</h3>
+              <p class="work-body">
+                Speech in, live lookups against ticketing and account systems, natural speech back
+                with barge-in, and a warm transfer the moment the caller asks or confidence drops.
+              </p>
+              <ul class="work-stack">
+                <li>Realtime voice</li><li>STT / TTS</li><li>Telephony / SIP</li><li>Function calling</li><li>Call analytics</li>
+              </ul>
+            </li>
+
+            <li class="work-card is-featured" data-group="agents">
+              <!-- <p class="work-stat"><b>00k</b><span>documents searchable by every team</span></p> -->
+              <p class="work-tag"><span class="work-layer">Layer 4</span> Enterprise copilot</p>
+              <h3>Answers with citations, and only what you may see</h3>
+              <p class="work-body">
+                A copilot over policies, SOPs, contracts and wikis that cites the source paragraph
+                and inherits each person's existing permissions, so nothing leaks through the
+                assistant.
+              </p>
+              <ul class="work-stack">
+                <li>RAG</li><li>Vector search</li><li>Permission-aware retrieval</li><li>Citations</li>
+              </ul>
+            </li>
+
+            <li class="work-card is-featured" data-group="agents">
+              <!-- <p class="work-stat"><b>00%</b><span>of invoices posted automatically</span></p> -->
+              <p class="work-tag"><span class="work-layer">Layer 4</span> Document agents</p>
+              <h3>Invoices matched and posted, exceptions routed with evidence</h3>
+              <p class="work-body">
+                Agents read invoices and purchase orders, match them against ERP records, post the
+                confident ones, and hand the rest to a person with the extracted evidence attached.
+              </p>
+              <ul class="work-stack">
+                <li>Document AI</li><li>OCR</li><li>LLM extraction</li><li>ERP APIs</li><li>Human in the loop</li>
+              </ul>
+            </li>
+
+            <li class="work-card" data-group="integration">
+              <!-- <p class="work-stat"><b>00</b><span>systems kept in step</span></p> -->
+              <p class="work-tag"><span class="work-layer">All layers</span> Systems integration</p>
+              <h3>ERP, CRM and finance in step without anyone rekeying</h3>
+              <p class="work-body">
+                Idempotent syncs, reconciliation reporting and alerting when two systems disagree.
+                The unglamorous layer that decides whether everything above it can be trusted.
+              </p>
+              <ul class="work-stack">
+                <li>NetSuite</li><li>Salesforce</li><li>REST / SOAP APIs</li><li>Event-driven sync</li><li>Python</li>
+              </ul>
+            </li>
+
+          </ul>
+
+          <p class="carousel-progress" aria-hidden="true"><span class="carousel-progress-bar"></span></p>
+          <p class="work-empty" hidden>Nothing in this category yet.</p>
+        </div>
+
+        <p class="work-note">
+          Client names and figures stay confidential unless the client has agreed to publish them.
+          We'll walk you through the architecture and the numbers on any of these on a call, under
+          NDA if you'd prefer.
+        </p>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="wrap cta-band-inner">
+        <div>
+          <h2 id="cta-title">Recognise your own problem in one of these?</h2>
+          <p>A 30-minute call is enough to tell you whether it's the same shape underneath.</p>
+        </div>
+        <div class="cta-band-actions">
+          <a class="btn btn-light" href="/contact/">Book a discovery call</a>
+          <a class="cta-band-mail" href="mailto:info.tessaractsystems@gmail.com">info.tessaractsystems@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <img class="footer-logo" src="/assets/logo%20full%20with%20company%20name.png" alt="Tessaract Systems"
+           width="2019" height="1508" loading="lazy" decoding="async">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/services/ai-engineering/">AI engineering</a>
+        <a href="/services/data-engineering/">Data engineering</a>
+        <a href="/services/software-cloud/">Software &amp; cloud</a>
+        <a href="/work/">Work</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+      <p class="footer-legal">&copy; <span id="year">2026</span> Tessaract Systems</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
