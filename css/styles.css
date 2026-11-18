@@ -239,13 +239,12 @@ a { color: inherit; }
 }
 
 .brand-mark {
-  width: 34px;
-  height: 34px;
-  fill: none;
-  stroke: var(--slate-deep);
-  stroke-width: 34;
-  stroke-linejoin: round;
-  stroke-linecap: round;
+  /* Simplified mark: the detailed one is noise at this size. Stroke width
+     is set on the SVG so it scales with the viewBox. */
+  width: 42px;
+  height: auto;
+  color: var(--slate-deep);
+  flex: none;
 }
 
 /* The wordmark is the one place the logotype face belongs. */
@@ -262,7 +261,7 @@ a { color: inherit; }
 /* Trailing letter-spacing is cancelled so each line centres optically. */
 .brand-name {
   margin-right: -.14em;
-  font-size: 1.15rem;
+  font-size: 1.22rem;
   letter-spacing: .14em;
 }
 
@@ -1327,7 +1326,7 @@ a { color: inherit; }
   gap: 40px;
 }
 
-.footer-logo { width: 108px; height: auto; }
+.footer-logo { width: 164px; height: auto; }
 
 .footer-nav {
   display: flex;
@@ -2088,11 +2087,12 @@ a { color: inherit; }
 @media (max-width: 640px) { .problem-list { grid-template-columns: minmax(0, 1fr); } }
 
 /* --------------------------------------------------------------------------
-   Hero figure: the brand mark, opening and closing
+   Hero figure: the mark opening into the stack
 
-   The logo is two stacked isometric planes. Here it opens into four and
-   settles back. Planes 2 and 4 fade in on the way open, so the closed
-   state is exactly the mark. Pure CSS; reduced motion holds it open.
+   Same geometry the scroll narrative uses. The planes sit at their
+   expanded positions in the markup; collapsing them is translateY(i*106
+   - 159), exactly the site's own data-state="0". The loop runs between
+   the two, so the hero shows the logo becoming the four layers.
    -------------------------------------------------------------------------- */
 
 .hero-figure {
@@ -2105,65 +2105,73 @@ a { color: inherit; }
 
 .markfold {
   width: 100%;
-  max-width: 540px;
+  max-width: 500px;
   height: auto;
   overflow: visible;
+  color: var(--slate-deep);
 }
 
-.lg-layer { will-change: transform; }
-
-.lg-hatch {
-  opacity: 0;
-  stroke: var(--graphite);
-  stroke-width: 1;
+.markfold .plane {
+  fill: none;
+  stroke: var(--slate-deep);
+  stroke-width: 4;
+  stroke-linejoin: round;
 }
 
-/* One shared 11s timeline: hold closed, open, hold open, close. */
-.lg-1 { animation: lg-open-1 11s ease-in-out infinite; }
-.lg-2 { animation: lg-open-2 11s ease-in-out infinite; }
-.lg-3 { animation: lg-open-3 11s ease-in-out infinite; }
-.lg-4 { animation: lg-open-4 11s ease-in-out infinite; }
-
-@keyframes lg-open-1 {
-  0%, 13%   { transform: translateY(0); }
-  36%, 66%  { transform: translateY(-120px); }
-  89%, 100% { transform: translateY(0); }
+.markfold .plane-halo {
+  fill: var(--paper);
+  stroke: var(--paper);
+  stroke-width: 11;
+  stroke-linejoin: round;
 }
 
-@keyframes lg-open-2 {
-  0%, 13%   { transform: translateY(0); opacity: 0; }
-  36%, 66%  { transform: translateY(-20px); opacity: 1; }
-  89%, 100% { transform: translateY(0); opacity: 0; }
+.hf-layer {
+  will-change: transform;
+  animation: 12s cubic-bezier(.65, 0, .35, 1) infinite;
 }
 
-@keyframes lg-open-3 {
-  0%, 13%   { transform: translateY(0); }
-  36%, 66%  { transform: translateY(-40px); }
-  89%, 100% { transform: translateY(0); }
+/* Interior detail only earns its place once the layers are apart. */
+.hf-layer > :not(.plane):not(.plane-halo) { animation: hf-detail 12s ease-in-out infinite; }
+
+.hf-0 { animation-name: hf-0; }
+.hf-1 { animation-name: hf-1; }
+.hf-2 { animation-name: hf-2; }
+.hf-3 { animation-name: hf-3; }
+
+@keyframes hf-0 {
+  0%, 16%   { transform: translateY(-159px); }
+  44%, 72%  { transform: translateY(-70px); }
+  96%, 100% { transform: translateY(-159px); }
+}
+@keyframes hf-1 {
+  0%, 16%   { transform: translateY(-53px); }
+  44%, 72%  { transform: translateY(-23px); }
+  96%, 100% { transform: translateY(-53px); }
+}
+@keyframes hf-2 {
+  0%, 16%   { transform: translateY(53px); }
+  44%, 72%  { transform: translateY(23px); }
+  96%, 100% { transform: translateY(53px); }
+}
+@keyframes hf-3 {
+  0%, 16%   { transform: translateY(159px); }
+  44%, 72%  { transform: translateY(70px); }
+  96%, 100% { transform: translateY(159px); }
 }
 
-@keyframes lg-open-4 {
-  0%, 13%   { transform: translateY(0); opacity: 0; }
-  36%, 66%  { transform: translateY(60px); opacity: 1; }
-  89%, 100% { transform: translateY(0); opacity: 0; }
-}
-
-/* Texture appears only while the stack is open. */
-.lg-layer .lg-hatch { animation: lg-hatch 11s ease-in-out infinite; }
-
-@keyframes lg-hatch {
-  0%, 18%   { opacity: 0; }
-  38%, 64%  { opacity: .4; }
-  82%, 100% { opacity: 0; }
+@keyframes hf-detail {
+  0%, 22%   { opacity: 0; }
+  46%, 70%  { opacity: 1; }
+  92%, 100% { opacity: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .lg-1, .lg-2, .lg-3, .lg-4, .lg-layer .lg-hatch { animation: none; }
-  .lg-1 { transform: translateY(-120px); }
-  .lg-2 { transform: translateY(-20px); opacity: 1; }
-  .lg-3 { transform: translateY(-40px); }
-  .lg-4 { transform: translateY(60px); opacity: 1; }
-  .lg-hatch { opacity: .4; }
+  .hf-layer, .hf-layer > :not(.plane):not(.plane-halo) { animation: none; }
+  .hf-0 { transform: translateY(-159px); }
+  .hf-1 { transform: translateY(-53px); }
+  .hf-2 { transform: translateY(53px); }
+  .hf-3 { transform: translateY(159px); }
+  .hf-layer > :not(.plane):not(.plane-halo) { opacity: 0; }
 }
 
 /* Single column below the breakpoint: the hero text carries it alone. */
