@@ -1321,42 +1321,85 @@ a { color: inherit; }
 
 .footer-inner {
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 40px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 2fr);
+  gap: clamp(36px, 6vw, 88px);
+  align-items: start;
 }
 
-.footer-logo { width: 164px; height: auto; }
+.footer-brand { max-width: 30ch; }
+.footer-logo { width: 150px; height: auto; display: block; }
 
-.footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 26px;
-  justify-content: center;
+.footer-brand p {
+  margin: 18px 0 0;
+  font-size: .875rem;
+  line-height: 1.6;
+  color: var(--graphite);
+  text-wrap: pretty;
 }
-.footer-nav a {
+
+/* Seven links in one row wrapped badly and orphaned the last item.
+   Grouped columns scale and give each link a category. */
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 44px);
+}
+
+.footer-cols h2 {
+  margin: 0 0 14px;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.footer-cols ul { margin: 0; padding: 0; list-style: none; }
+.footer-cols li + li { margin-top: 10px; }
+
+.footer-cols a {
   font-size: .9375rem;
   text-decoration: none;
   color: var(--graphite);
+  overflow-wrap: anywhere;
 }
-.footer-nav a:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--signal); }
+
+.footer-cols a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--signal);
+}
+
+.footer-base {
+  margin-top: clamp(40px, 5vw, 64px);
+  padding-top: 22px;
+  border-top: 1px solid var(--rule);
+}
 
 .footer-legal {
-  font-size: .875rem;
+  margin: 0;
+  font-size: .8125rem;
   color: var(--graphite);
-  text-align: right;
-  line-height: 1.5;
-  text-wrap: balance;
 }
+
+@media (max-width: 860px) {
+  .footer-inner { grid-template-columns: minmax(0, 1fr); }
+  .footer-brand { max-width: none; }
+}
+
+@media (max-width: 560px) {
+  .footer-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 32px; }
+}
+
+
+
+
+
 
 .contact-entity {
   margin-top: 18px;
   font-size: .8125rem;
   opacity: .75;
-}
-
-@media (max-width: 860px) {
-  .footer-legal { text-align: center; max-width: none; }
 }
 
 /* --------------------------------------------------------------------------
@@ -1934,10 +1977,6 @@ a { color: inherit; }
 
   .hero-actions .btn { flex: 1 1 100%; }
   .hero-proof { gap: 10px; flex-direction: column; }
-
-  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
-  .footer-nav { justify-content: flex-start; }
-  .footer-legal { text-align: left; }
 }
 
 @media (prefers-reduced-motion: reduce) {
