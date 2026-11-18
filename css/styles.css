@@ -2179,8 +2179,38 @@ a { color: inherit; }
   94%, 100% { transform: translateY(-159px); }
 }
 
+/* The lattice: the stack's silhouette edges, drawn only while it is open.
+   Suggests the layers are faces of one object rather than loose planes. */
+.hf-edges {
+  opacity: 0;
+  animation: hf-edges 20s cubic-bezier(.65, 0, .35, 1) infinite;
+}
+
+@keyframes hf-edges {
+  0%, 22%   { opacity: 0; }
+  48%, 68%  { opacity: 1; }
+  90%, 100% { opacity: 0; }
+}
+
+/* A slow bloom behind the signal node. Deliberately restrained: it should
+   read as the core having energy, not as a glow effect. */
+.hf-bloom {
+  opacity: 0;
+  transform-origin: 200px 148.2px;
+  animation: hf-bloom 20s ease-in-out infinite;
+}
+
+@keyframes hf-bloom {
+  0%, 24%   { opacity: 0; transform: scale(.6); }
+  46%       { opacity: .5; transform: scale(1); }
+  58%       { opacity: .28; transform: scale(.88); }
+  68%       { opacity: .5; transform: scale(1); }
+  88%, 100% { opacity: 0; transform: scale(.6); }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .hf-scale, .hf-layer { animation: none; }
+  .hf-scale, .hf-layer, .hf-edges, .hf-bloom { animation: none; }
+  .hf-edges, .hf-bloom { opacity: 0; }
   .hf-0 { transform: translateY(-159px); }
   .hf-1 { transform: translateY(-53px); }
   .hf-2 { transform: translateY(53px); }

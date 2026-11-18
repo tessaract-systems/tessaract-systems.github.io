@@ -6,7 +6,7 @@
 (function () {
   'use strict';
 
-  var CONTACT_EMAIL = 'info.tessaractsystems@gmail.com';
+  var CONTACT_EMAIL = 'info@tessaractsystems.com';
 
   /* ---------------------------------------------------------------------
      1. Scroll-driven layer stack
