@@ -239,9 +239,9 @@ a { color: inherit; }
 }
 
 .brand-mark {
-  /* Simplified mark: the detailed one is noise at this size. Stroke width
-     is set on the SVG so it scales with the viewBox. */
-  width: 42px;
+  /* The full mark, same as the footer lockup and the hero. It needs ~48px
+     to stay legible; below that use tessaract-mark-simple instead. */
+  width: 50px;
   height: auto;
   color: var(--slate-deep);
   flex: none;
@@ -1345,16 +1345,8 @@ a { color: inherit; }
   font-size: .875rem;
   color: var(--graphite);
   text-align: right;
-  max-width: 34ch;
   line-height: 1.5;
-}
-
-/* The registered-office line is legal small print, not a selling point. */
-.footer-legal span:not(#year) {
-  display: block;
-  margin-top: 6px;
-  font-size: .75rem;
-  opacity: .8;
+  text-wrap: balance;
 }
 
 .contact-entity {
