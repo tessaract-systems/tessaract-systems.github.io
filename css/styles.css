@@ -2088,12 +2088,11 @@ a { color: inherit; }
 @media (max-width: 640px) { .problem-list { grid-template-columns: minmax(0, 1fr); } }
 
 /* --------------------------------------------------------------------------
-   Hero figure: reconciliation animation
+   Hero figure: the brand mark, opening and closing
 
-   Dramatises the headline. Three systems report three figures for the same
-   question, then reconcile to one. Two sets of elements cross-fade on the
-   same loop: .rc-a is the unresolved state, .rc-b the resolved one. Pure
-   CSS, no JS, and reduced motion holds the resolved state.
+   The logo is two stacked isometric planes. Here it opens into four and
+   settles back. Planes 2 and 4 fade in on the way open, so the closed
+   state is exactly the mark. Pure CSS; reduced motion holds it open.
    -------------------------------------------------------------------------- */
 
 .hero-figure {
@@ -2104,73 +2103,67 @@ a { color: inherit; }
   justify-content: center;
 }
 
-.reconcile {
+.markfold {
   width: 100%;
-  max-width: 560px;
+  max-width: 540px;
   height: auto;
   overflow: visible;
 }
 
-.rc-fig,
-.rc-answer,
-.rc-q,
-.rc-cap {
-  font-family: var(--font);
-  text-anchor: middle;
+.lg-layer { will-change: transform; }
+
+.lg-hatch {
+  opacity: 0;
+  stroke: var(--graphite);
+  stroke-width: 1;
 }
 
-.rc-fig {
-  font-size: 30px;
-  font-weight: 600;
-  letter-spacing: -.5px;
-  fill: var(--slate);
+/* One shared 11s timeline: hold closed, open, hold open, close. */
+.lg-1 { animation: lg-open-1 11s ease-in-out infinite; }
+.lg-2 { animation: lg-open-2 11s ease-in-out infinite; }
+.lg-3 { animation: lg-open-3 11s ease-in-out infinite; }
+.lg-4 { animation: lg-open-4 11s ease-in-out infinite; }
+
+@keyframes lg-open-1 {
+  0%, 13%   { transform: translateY(0); }
+  36%, 66%  { transform: translateY(-120px); }
+  89%, 100% { transform: translateY(0); }
 }
 
-.rc-answer {
-  font-size: 40px;
-  font-weight: 600;
-  letter-spacing: -.8px;
-  fill: var(--ink);
+@keyframes lg-open-2 {
+  0%, 13%   { transform: translateY(0); opacity: 0; }
+  36%, 66%  { transform: translateY(-20px); opacity: 1; }
+  89%, 100% { transform: translateY(0); opacity: 0; }
 }
 
-.rc-q {
-  font-size: 44px;
-  font-weight: 600;
-  fill: var(--signal);
+@keyframes lg-open-3 {
+  0%, 13%   { transform: translateY(0); }
+  36%, 66%  { transform: translateY(-40px); }
+  89%, 100% { transform: translateY(0); }
 }
 
-.rc-cap { font-size: 19px; fill: var(--graphite); }
-
-.rc-a, .rc-b { animation: 9s ease-in-out infinite; }
-.rc-a { animation-name: rc-unresolved; }
-.rc-b { animation-name: rc-resolved; }
-
-/* Hold each state long enough to read, and cross-fade between them. */
-@keyframes rc-unresolved {
-  0%, 38%  { opacity: 1; }
-  47%, 90% { opacity: 0; }
-  99%, 100% { opacity: 1; }
+@keyframes lg-open-4 {
+  0%, 13%   { transform: translateY(0); opacity: 0; }
+  36%, 66%  { transform: translateY(60px); opacity: 1; }
+  89%, 100% { transform: translateY(0); opacity: 0; }
 }
 
-@keyframes rc-resolved {
-  0%, 38%  { opacity: 0; }
-  47%, 90% { opacity: 1; }
-  99%, 100% { opacity: 0; }
-}
+/* Texture appears only while the stack is open. */
+.lg-layer .lg-hatch { animation: lg-hatch 11s ease-in-out infinite; }
 
-/* The target outline picks up the signal colour while unresolved. */
-.rc-target { animation: rc-target 9s ease-in-out infinite; }
-
-@keyframes rc-target {
-  0%, 38%  { stroke: var(--signal); }
-  47%, 90% { stroke: var(--slate); }
-  99%, 100% { stroke: var(--signal); }
+@keyframes lg-hatch {
+  0%, 18%   { opacity: 0; }
+  38%, 64%  { opacity: .4; }
+  82%, 100% { opacity: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .rc-a { opacity: 0; animation: none; }
-  .rc-b { opacity: 1; animation: none; }
-  .rc-target { stroke: var(--slate); animation: none; }
+  .lg-1, .lg-2, .lg-3, .lg-4, .lg-layer .lg-hatch { animation: none; }
+  .lg-1 { transform: translateY(-120px); }
+  .lg-2 { transform: translateY(-20px); opacity: 1; }
+  .lg-3 { transform: translateY(-40px); }
+  .lg-4 { transform: translateY(60px); opacity: 1; }
+  .lg-hatch { opacity: .4; }
 }
 
 /* Single column below the breakpoint: the hero text carries it alone. */
