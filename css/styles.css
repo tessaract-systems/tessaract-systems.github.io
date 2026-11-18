@@ -2089,10 +2089,10 @@ a { color: inherit; }
 /* --------------------------------------------------------------------------
    Hero figure: the mark opening into the stack
 
-   Same geometry the scroll narrative uses. The planes sit at their
-   expanded positions in the markup; collapsing them is translateY(i*106
-   - 159), exactly the site's own data-state="0". The loop runs between
-   the two, so the hero shows the logo becoming the four layers.
+   Rests as the logo, opens slowly into the four layers, holds, closes.
+   Layer offsets are the site's own collapsed geometry, translateY(i*106
+   - 159). The whole stack counter-scales as it opens, so the expanded
+   state stays inside the hero instead of running off the top and bottom.
    -------------------------------------------------------------------------- */
 
 .hero-figure {
@@ -2105,7 +2105,7 @@ a { color: inherit; }
 
 .markfold {
   width: 100%;
-  max-width: 500px;
+  max-width: 470px;
   height: auto;
   overflow: visible;
   color: var(--slate-deep);
@@ -2125,48 +2125,69 @@ a { color: inherit; }
   stroke-linejoin: round;
 }
 
-.hf-layer {
-  will-change: transform;
-  animation: 12s cubic-bezier(.65, 0, .35, 1) infinite;
+/* One 16s timeline shared by every part: hold closed, open slowly,
+   hold open, close slowly. */
+.hf-scale,
+.hf-layer,
+.hf-layer > :not(.plane):not(.plane-halo) {
+  animation-duration: 16s;
+  animation-timing-function: cubic-bezier(.45, 0, .25, 1);
+  animation-iteration-count: infinite;
 }
 
-/* Interior detail only earns its place once the layers are apart. */
-.hf-layer > :not(.plane):not(.plane-halo) { animation: hf-detail 12s ease-in-out infinite; }
+.hf-layer { will-change: transform; }
+
+.hf-scale {
+  transform-origin: 200px 305px;
+  animation-name: hf-scale;
+}
 
 .hf-0 { animation-name: hf-0; }
 .hf-1 { animation-name: hf-1; }
 .hf-2 { animation-name: hf-2; }
 .hf-3 { animation-name: hf-3; }
 
-@keyframes hf-0 {
-  0%, 16%   { transform: translateY(-159px); }
-  44%, 72%  { transform: translateY(-70px); }
-  96%, 100% { transform: translateY(-159px); }
-}
-@keyframes hf-1 {
-  0%, 16%   { transform: translateY(-53px); }
-  44%, 72%  { transform: translateY(-23px); }
-  96%, 100% { transform: translateY(-53px); }
-}
-@keyframes hf-2 {
-  0%, 16%   { transform: translateY(53px); }
-  44%, 72%  { transform: translateY(23px); }
-  96%, 100% { transform: translateY(53px); }
-}
-@keyframes hf-3 {
-  0%, 16%   { transform: translateY(159px); }
-  44%, 72%  { transform: translateY(70px); }
-  96%, 100% { transform: translateY(159px); }
+.hf-layer > :not(.plane):not(.plane-halo) {
+  animation-name: hf-detail;
+  animation-timing-function: ease-in-out;
 }
 
+@keyframes hf-scale {
+  0%, 12%   { transform: scale(1); }
+  42%, 62%  { transform: scale(.72); }
+  92%, 100% { transform: scale(1); }
+}
+
+@keyframes hf-0 {
+  0%, 12%   { transform: translateY(-159px); }
+  42%, 62%  { transform: translateY(0); }
+  92%, 100% { transform: translateY(-159px); }
+}
+@keyframes hf-1 {
+  0%, 12%   { transform: translateY(-53px); }
+  42%, 62%  { transform: translateY(0); }
+  92%, 100% { transform: translateY(-53px); }
+}
+@keyframes hf-2 {
+  0%, 12%   { transform: translateY(53px); }
+  42%, 62%  { transform: translateY(0); }
+  92%, 100% { transform: translateY(53px); }
+}
+@keyframes hf-3 {
+  0%, 12%   { transform: translateY(159px); }
+  42%, 62%  { transform: translateY(0); }
+  92%, 100% { transform: translateY(159px); }
+}
+
+/* Interior detail only earns its place once the layers are apart. */
 @keyframes hf-detail {
-  0%, 22%   { opacity: 0; }
-  46%, 70%  { opacity: 1; }
-  92%, 100% { opacity: 0; }
+  0%, 20%   { opacity: 0; }
+  44%, 60%  { opacity: 1; }
+  86%, 100% { opacity: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hf-layer, .hf-layer > :not(.plane):not(.plane-halo) { animation: none; }
+  .hf-scale, .hf-layer, .hf-layer > :not(.plane):not(.plane-halo) { animation: none; }
   .hf-0 { transform: translateY(-159px); }
   .hf-1 { transform: translateY(-53px); }
   .hf-2 { transform: translateY(53px); }
