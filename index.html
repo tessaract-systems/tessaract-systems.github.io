@@ -212,7 +212,7 @@
          ================================================================ -->
     <section class="section problems" id="problems" aria-labelledby="problems-title">
       <div class="wrap">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
           <p class="eyebrow">Sound familiar?</p>
           <h2 id="problems-title">If two of these are true, we should talk.</h2>
           <p>
@@ -222,32 +222,32 @@
           </p>
         </div>
         <ul class="problem-list">
-          <li class="problem-card">
+          <li class="problem-card" data-reveal style="--d:0">
             <h3>&ldquo;Three systems, three answers to the same question.&rdquo;</h3>
             <p>Finance, sales and operations each pull their own numbers, so every meeting starts by arguing about whose figure is right instead of what to do about it.</p>
             <a class="start-link" href="/services/data-engineering/">Fix the foundation</a>
           </li>
-          <li class="problem-card">
+          <li class="problem-card" data-reveal style="--d:1">
             <h3>&ldquo;Somebody rebuilds the same report by hand every Monday.&rdquo;</h3>
             <p>A person has quietly become the data pipeline. It works until they are on holiday, and it costs you a skilled salary spent on copy and paste.</p>
             <a class="start-link" href="/services/data-engineering/">Automate the reporting</a>
           </li>
-          <li class="problem-card">
+          <li class="problem-card" data-reveal style="--d:2">
             <h3>&ldquo;Leadership asked about AI months ago. Nothing has shipped.&rdquo;</h3>
             <p>Not for lack of ideas. Nobody had a spare day a week to scope it, and it keeps sliding to the next quarter.</p>
             <a class="start-link" href="/services/ai-engineering/">Start with one use case</a>
           </li>
-          <li class="problem-card">
+          <li class="problem-card" data-reveal style="--d:3">
             <h3>&ldquo;The demo was impressive. Nobody could say what it would change.&rdquo;</h3>
             <p>Every vendor call turns into a platform pitch before anyone has agreed which bottleneck is actually being solved.</p>
             <a class="start-link" href="/pricing/#assessment">Get it assessed first</a>
           </li>
-          <li class="problem-card">
+          <li class="problem-card" data-reveal style="--d:4">
             <h3>&ldquo;The quote came back costing more than the problem.&rdquo;</h3>
             <p>Large firms price for enterprise scale and enterprise timelines. If a proposal needs a procurement team to evaluate, it was not written for you.</p>
             <a class="start-link" href="/pricing/">See how we scope</a>
           </li>
-          <li class="problem-card">
+          <li class="problem-card" data-reveal style="--d:5">
             <h3>&ldquo;You cannot take on another system nobody here can run.&rdquo;</h3>
             <p>A tool only your consultant understands is a liability. Anything we build is handed over with the code, the documentation and the reasoning behind it.</p>
             <a class="start-link" href="/about/">How we hand over</a>
@@ -452,35 +452,53 @@
 
     <section class="section routes" aria-labelledby="routes-title">
       <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">What that means in practice</p>
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">What we do</p>
           <h2 id="routes-title">Three divisions, one team</h2>
           <p>Real projects cross all three, which is why we do not hand you between vendors to get them.</p>
         </div>
-        <div class="capability-grid">
-          <article class="capability">
-            <h3>AI engineering &amp; automation</h3>
-            <p>
-              Agents, RAG, voice assistants and document intelligence, with the evaluation and
-              guardrails that let them run unsupervised.
-            </p>
-            <a class="start-link" href="/services/ai-engineering/">What we build</a>
+        <div class="svc-grid">
+          <article class="svc-card" data-reveal style="--d:0">
+            <a class="svc-link" href="/services/ai-engineering/">
+              <svg class="svc-glyph" viewBox="0 0 110 74" aria-hidden="true"><polygon points="55,12 105,37 55,62 5,37" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><polygon points="55,26 77,37 55,48 33,37" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".5"/><polygon points="55,22 63,26 55,30 47,26" fill="#FAFAFA" stroke="currentColor" stroke-width="1.6"/><polygon points="77,33 85,37 77,41 69,37" fill="#FAFAFA" stroke="currentColor" stroke-width="1.6"/><polygon points="33,33 41,37 33,41 25,37" fill="#FAFAFA" stroke="currentColor" stroke-width="1.6"/><polygon points="55,43.5 64,48 55,52.5 46,48" fill="#DB5461"/></svg>
+              <h3>AI engineering &amp; automation</h3>
+              <p>Agents that do real work, with the evaluation and guardrails that let them run unsupervised.</p>
+              <ul class="svc-list">
+              <li>AI agents &amp; multi-agent systems</li>
+              <li>RAG &amp; enterprise search</li>
+              <li>Voice &amp; conversational AI</li>
+              <li>Document intelligence</li>
+              </ul>
+              <span class="svc-cta">What we build<svg viewBox="0 0 20 12" aria-hidden="true"><path d="M13 1l5 5-5 5M18 6H1"/></svg></span>
+            </a>
           </article>
-          <article class="capability">
-            <h3>Data engineering &amp; analytics</h3>
-            <p>
-              Lakehouses, migrations with row-level parity, semantic layers and forecasting models
-              that stay accurate after launch.
-            </p>
-            <a class="start-link" href="/services/data-engineering/">What we build</a>
+          <article class="svc-card" data-reveal style="--d:1">
+            <a class="svc-link" href="/services/data-engineering/">
+              <svg class="svc-glyph" viewBox="0 0 110 74" aria-hidden="true"><polygon points="55,12 105,37 55,62 5,37" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M19.5,19.25 L59.5,39.25" stroke="currentColor" stroke-width="1.2" opacity=".55" fill="none"/><path d="M19.5,39.25 L59.5,19.25" stroke="currentColor" stroke-width="1.2" opacity=".55" fill="none"/><path d="M35,27 L75,47" stroke="currentColor" stroke-width="1.2" opacity=".55" fill="none"/><path d="M35,47 L75,27" stroke="currentColor" stroke-width="1.2" opacity=".55" fill="none"/><path d="M50.5,34.75 L90.5,54.75" stroke="currentColor" stroke-width="1.2" opacity=".55" fill="none"/><path d="M50.5,54.75 L90.5,34.75" stroke="currentColor" stroke-width="1.2" opacity=".55" fill="none"/></svg>
+              <h3>Data engineering &amp; analytics</h3>
+              <p>The foundation underneath. Platforms, pipelines and one agreed definition per metric.</p>
+              <ul class="svc-list">
+              <li>Lakehouses &amp; platform migrations</li>
+              <li>Batch &amp; streaming pipelines</li>
+              <li>Semantic layers &amp; self-serve BI</li>
+              <li>Forecasting &amp; production ML</li>
+              </ul>
+              <span class="svc-cta">What we build<svg viewBox="0 0 20 12" aria-hidden="true"><path d="M13 1l5 5-5 5M18 6H1"/></svg></span>
+            </a>
           </article>
-          <article class="capability">
-            <h3>Software, cloud &amp; integration</h3>
-            <p>
-              The applications, APIs and CRM and ERP integrations that turn a model into something
-              the business can actually use.
-            </p>
-            <a class="start-link" href="/services/software-cloud/">What we build</a>
+          <article class="svc-card" data-reveal style="--d:2">
+            <a class="svc-link" href="/services/software-cloud/">
+              <svg class="svc-glyph" viewBox="0 0 110 74" aria-hidden="true"><polygon points="55,12 105,37 55,62 5,37" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M55,37 L55,24" stroke="currentColor" stroke-width="1.3" opacity=".6" fill="none"/><path d="M55,37 L81,38" stroke="currentColor" stroke-width="1.3" opacity=".6" fill="none"/><path d="M55,37 L29,38" stroke="currentColor" stroke-width="1.3" opacity=".6" fill="none"/><path d="M55,37 L57,50" stroke="currentColor" stroke-width="1.3" opacity=".6" fill="none"/><ellipse cx="55" cy="24" rx="4.6" ry="2.3" fill="#FAFAFA" stroke="currentColor" stroke-width="1.4"/><ellipse cx="81" cy="38" rx="4.6" ry="2.3" fill="#FAFAFA" stroke="currentColor" stroke-width="1.4"/><ellipse cx="29" cy="38" rx="4.6" ry="2.3" fill="#FAFAFA" stroke="currentColor" stroke-width="1.4"/><ellipse cx="57" cy="50" rx="4.6" ry="2.3" fill="#FAFAFA" stroke="currentColor" stroke-width="1.4"/><ellipse cx="55" cy="37" rx="6" ry="3" fill="#DB5461"/></svg>
+              <h3>Software, cloud &amp; integration</h3>
+              <p>The systems around the data, so a model becomes something the business can actually use.</p>
+              <ul class="svc-list">
+              <li>Custom applications &amp; APIs</li>
+              <li>CRM, ERP &amp; finance integration</li>
+              <li>Cloud architecture on AWS, Azure, GCP</li>
+              <li>Reliability &amp; cost engineering</li>
+              </ul>
+              <span class="svc-cta">What we build<svg viewBox="0 0 20 12" aria-hidden="true"><path d="M13 1l5 5-5 5M18 6H1"/></svg></span>
+            </a>
           </article>
         </div>
       </div>
@@ -488,7 +506,7 @@
 
     <section class="section engage" id="engage" aria-labelledby="engage-title">
       <div class="wrap">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
           <p class="eyebrow">How we engage</p>
           <h2 id="engage-title">A small paid step first, so nobody bets blind.</h2>
           <p>
@@ -560,7 +578,7 @@
 
     <section class="section record" aria-labelledby="record-title">
       <div class="wrap">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
           <p class="eyebrow">Track record</p>
           <h2 id="record-title">A senior team, not a sales deck.</h2>
           <p>
@@ -569,19 +587,19 @@
           </p>
         </div>
         <ul class="record-stats">
-          <li>
+          <li data-reveal style="--d:0">
             <b>15+</b>
             <span>Years across software, data engineering and machine learning</span>
           </li>
-          <li>
+          <li data-reveal style="--d:1">
             <b>4</b>
             <span>Layers owned end to end, from ingestion pipelines to live agents</span>
           </li>
-          <li>
+          <li data-reveal style="--d:2">
             <b>6+</b>
             <span>Data platforms and clouds we build on natively, with no preferred vendor</span>
           </li>
-          <li>
+          <li data-reveal style="--d:3">
             <b>0</b>
             <span>Licenses resold. We are paid to engineer, never to place a product</span>
           </li>
@@ -591,7 +609,7 @@
 
     <section class="section principles" aria-labelledby="why-title">
       <div class="wrap principles-grid">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
           <p class="eyebrow eyebrow-invert">Why us</p>
           <h2 id="why-title">Senior engineering without the enterprise proposal.</h2>
           <p>
@@ -600,7 +618,7 @@
           </p>
         </div>
         <dl class="principle-list">
-          <div>
+          <div data-reveal style="--d:0">
             <dt>No juniors learning on your budget</dt>
             <dd>You get the engineers who have done this before. There is no pyramid underneath us billing for the learning curve.</dd>
           </div>
@@ -622,7 +640,7 @@
 
     <section class="section portfolio" id="portfolio" aria-labelledby="portfolio-title">
       <div class="wrap">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
           <p class="eyebrow">Selected work</p>
           <h2 id="portfolio-title">Migrations, data platforms, ML models and a lot of AI agents.</h2>
           <p>
@@ -633,17 +651,17 @@
         </div>
 
         <ul class="work-grid">
-          <li class="work-card">
+          <li class="work-card" data-reveal style="--d:0">
             <p class="work-tag"><span class="work-layer">Layer 1</span> Platform migration</p>
             <h3>An analytics estate moved to a lakehouse without losing the finance team's trust</h3>
             <ul class="work-stack"><li>Databricks</li><li>Delta Lake</li><li>Unity Catalog</li></ul>
           </li>
-          <li class="work-card">
+          <li class="work-card" data-reveal style="--d:1">
             <p class="work-tag"><span class="work-layer">Layer 4</span> AI agents</p>
             <h3>A multi-agent system that drafts and checks first-line support replies</h3>
             <ul class="work-stack"><li>LangGraph</li><li>pgvector</li><li>Python</li></ul>
           </li>
-          <li class="work-card">
+          <li class="work-card" data-reveal style="--d:2">
             <p class="work-tag"><span class="work-layer">Layer 2</span> Semantics &amp; BI</p>
             <h3>One governed definition per metric, with a chat interface on top of it</h3>
             <ul class="work-stack"><li>dbt Semantic Layer</li><li>Snowflake</li><li>Power BI</li></ul>

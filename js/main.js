@@ -421,7 +421,46 @@
   }());
 
   /* ---------------------------------------------------------------------
-     7. Price currency
+     7. Scroll reveal
+     Reveals [data-reveal] once, when it first comes into view. The hidden
+     state lives behind .js, so with scripting off nothing is ever stuck
+     invisible. Honours prefers-reduced-motion by revealing immediately.
+     --------------------------------------------------------------------- */
+  (function () {
+    var items = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+    if (!items.length) return;
+
+    var still = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var showAll = function () {
+      items.forEach(function (el) { el.classList.add('is-in'); });
+    };
+
+    if (still.matches || !('IntersectionObserver' in window)) { showAll(); return; }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-in');
+        observer.unobserve(entry.target);     // reveal once, never re-hide
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+
+    items.forEach(function (el) { observer.observe(el); });
+
+    // Anything already on screen at load should not wait for a scroll.
+    window.requestAnimationFrame(function () {
+      items.forEach(function (el) {
+        var box = el.getBoundingClientRect();
+        if (box.top < window.innerHeight && box.bottom > 0) {
+          el.classList.add('is-in');
+          observer.unobserve(el);
+        }
+      });
+    });
+  }());
+
+  /* ---------------------------------------------------------------------
+     8. Price currency
      Every price element carries data-usd, data-eur, data-gbp and data-aed.
      The visitor's choice is remembered; a first visit guesses from the
      time zone and otherwise stays on USD, which is also the no-JS text.
@@ -481,7 +520,7 @@
   }());
 
   /* ---------------------------------------------------------------------
-     8. Footer year
+     9. Footer year
      --------------------------------------------------------------------- */
   (function () {
     var year = document.getElementById('year');
