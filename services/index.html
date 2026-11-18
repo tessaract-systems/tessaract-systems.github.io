@@ -119,38 +119,64 @@
 
     <section class="section" aria-labelledby="div-title">
       <div class="wrap">
-        <div class="section-head">
+        <div class="section-head" data-reveal>
           <p class="eyebrow">What we do</p>
           <h2 id="div-title">What each division covers</h2>
           <p>Each one stands on its own. Together they are the reason our AI work reaches production.</p>
         </div>
 
-        <ul class="start-list">
-          <li>
-            <svg class="service-glyph" viewBox="0 0 40 60" aria-hidden="true" data-active="0"><path d="M20 46 36 52 20 58 4 52Z"/><path d="M20 32 36 38 20 44 4 38Z"/><path d="M20 18 36 24 20 30 4 24Z"/><path d="M20 4 36 10 20 16 4 10Z"/></svg>
-            <h3>AI engineering &amp; intelligent automation</h3>
-            <p>Agents and multi-agent systems, RAG and enterprise search, voice assistants, document intelligence and process automation &mdash; with the evaluation and guardrails that let them run unsupervised.</p>
-            <a class="start-link" href="/services/ai-engineering/">Explore AI engineering</a>
-          </li>
-          <li>
-            <svg class="service-glyph" viewBox="0 0 40 60" aria-hidden="true" data-active="1"><path d="M20 46 36 52 20 58 4 52Z"/><path d="M20 32 36 38 20 44 4 38Z"/><path d="M20 18 36 24 20 30 4 24Z"/><path d="M20 4 36 10 20 16 4 10Z"/></svg>
-            <h3>Data engineering &amp; analytics</h3>
-            <p>Lakehouses and warehouses, platform migrations, batch and streaming pipelines, semantic layers, self-serve BI and forecasting models that stay accurate after launch.</p>
-            <a class="start-link" href="/services/data-engineering/">Explore data engineering</a>
-          </li>
-          <li>
-            <svg class="service-glyph" viewBox="0 0 40 60" aria-hidden="true" data-active="2"><path d="M20 46 36 52 20 58 4 52Z"/><path d="M20 32 36 38 20 44 4 38Z"/><path d="M20 18 36 24 20 30 4 24Z"/><path d="M20 4 36 10 20 16 4 10Z"/></svg>
-            <h3>Software engineering &amp; cloud</h3>
-            <p>Custom applications, APIs and internal tools, CRM and ERP integration, cloud architecture on AWS, Azure and GCP, and the reliability work that keeps it all standing.</p>
-            <a class="start-link" href="/services/software-cloud/">Explore software &amp; cloud</a>
-          </li>
-          <li>
-            <svg class="service-glyph" viewBox="0 0 40 60" aria-hidden="true" data-active="3"><path d="M20 46 36 52 20 58 4 52Z"/><path d="M20 32 36 38 20 44 4 38Z"/><path d="M20 18 36 24 20 30 4 24Z"/><path d="M20 4 36 10 20 16 4 10Z"/></svg>
+        <div class="svc-grid">
+          <article class="svc-card" data-reveal style="--d:0">
+            <a class="svc-link" href="/services/ai-engineering/">
+              <svg class="svc-glyph" viewBox="0 0 110 74" aria-hidden="true"><polygon points="55,12 105,37 55,62 5,37" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><polygon points="55,26 77,37 55,48 33,37" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".5"/><polygon points="55,22 63,26 55,30 47,26" fill="#FAFAFA" stroke="currentColor" stroke-width="1.6"/><polygon points="77,33 85,37 77,41 69,37" fill="#FAFAFA" stroke="currentColor" stroke-width="1.6"/><polygon points="33,33 41,37 33,41 25,37" fill="#FAFAFA" stroke="currentColor" stroke-width="1.6"/><polygon points="55,43.5 64,48 55,52.5 46,48" fill="#DB5461"/></svg>
+              <h3>AI engineering &amp; automation</h3>
+              <p>Agents that do real work, with the evaluation and guardrails that let them run unsupervised.</p>
+              <ul class="svc-list">
+              <li>AI agents &amp; multi-agent systems</li>
+              <li>RAG &amp; enterprise search</li>
+              <li>Voice &amp; conversational AI</li>
+              <li>Document intelligence</li>
+              </ul>
+              <span class="svc-cta">What we build<svg viewBox="0 0 20 12" aria-hidden="true"><path d="M13 1l5 5-5 5M18 6H1"/></svg></span>
+            </a>
+          </article>
+          <article class="svc-card" data-reveal style="--d:1">
+            <a class="svc-link" href="/services/data-engineering/">
+              <svg class="svc-glyph" viewBox="0 0 110 74" aria-hidden="true"><polygon points="55,12 105,37 55,62 5,37" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M19.5,19.25 L59.5,39.25" stroke="currentColor" stroke-width="1.2" opacity=".55" fill="none"/><path d="M19.5,39.25 L59.5,19.25" stroke="currentColor" stroke-width="1.2" opacity=".55" fill="none"/><path d="M35,27 L75,47" stroke="currentColor" stroke-width="1.2" opacity=".55" fill="none"/><path d="M35,47 L75,27" stroke="currentColor" stroke-width="1.2" opacity=".55" fill="none"/><path d="M50.5,34.75 L90.5,54.75" stroke="currentColor" stroke-width="1.2" opacity=".55" fill="none"/><path d="M50.5,54.75 L90.5,34.75" stroke="currentColor" stroke-width="1.2" opacity=".55" fill="none"/></svg>
+              <h3>Data engineering &amp; analytics</h3>
+              <p>The foundation underneath. Platforms, pipelines and one agreed definition per metric.</p>
+              <ul class="svc-list">
+              <li>Lakehouses &amp; platform migrations</li>
+              <li>Batch &amp; streaming pipelines</li>
+              <li>Semantic layers &amp; self-serve BI</li>
+              <li>Forecasting &amp; production ML</li>
+              </ul>
+              <span class="svc-cta">What we build<svg viewBox="0 0 20 12" aria-hidden="true"><path d="M13 1l5 5-5 5M18 6H1"/></svg></span>
+            </a>
+          </article>
+          <article class="svc-card" data-reveal style="--d:2">
+            <a class="svc-link" href="/services/software-cloud/">
+              <svg class="svc-glyph" viewBox="0 0 110 74" aria-hidden="true"><polygon points="55,12 105,37 55,62 5,37" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M55,37 L55,24" stroke="currentColor" stroke-width="1.3" opacity=".6" fill="none"/><path d="M55,37 L81,38" stroke="currentColor" stroke-width="1.3" opacity=".6" fill="none"/><path d="M55,37 L29,38" stroke="currentColor" stroke-width="1.3" opacity=".6" fill="none"/><path d="M55,37 L57,50" stroke="currentColor" stroke-width="1.3" opacity=".6" fill="none"/><ellipse cx="55" cy="24" rx="4.6" ry="2.3" fill="#FAFAFA" stroke="currentColor" stroke-width="1.4"/><ellipse cx="81" cy="38" rx="4.6" ry="2.3" fill="#FAFAFA" stroke="currentColor" stroke-width="1.4"/><ellipse cx="29" cy="38" rx="4.6" ry="2.3" fill="#FAFAFA" stroke="currentColor" stroke-width="1.4"/><ellipse cx="57" cy="50" rx="4.6" ry="2.3" fill="#FAFAFA" stroke="currentColor" stroke-width="1.4"/><ellipse cx="55" cy="37" rx="6" ry="3" fill="#DB5461"/></svg>
+              <h3>Software, cloud &amp; integration</h3>
+              <p>The systems around the data, so a model becomes something the business can actually use.</p>
+              <ul class="svc-list">
+              <li>Custom applications &amp; APIs</li>
+              <li>CRM, ERP &amp; finance integration</li>
+              <li>Cloud architecture on AWS, Azure, GCP</li>
+              <li>Reliability &amp; cost engineering</li>
+              </ul>
+              <span class="svc-cta">What we build<svg viewBox="0 0 20 12" aria-hidden="true"><path d="M13 1l5 5-5 5M18 6H1"/></svg></span>
+            </a>
+          </article>
+        </div>
+
+        <aside class="svc-aside" data-reveal>
+          <div>
             <h3>Not sure which you need?</h3>
             <p>Most engagements start with a two-week assessment that tells you which layer is actually holding you back, with a costed plan at the end of it.</p>
-            <a class="start-link" href="/pricing/#assessment">See the assessment</a>
-          </li>
-        </ul>
+          </div>
+          <a class="btn btn-ghost" href="/pricing/#assessment">See the assessment</a>
+        </aside>
       </div>
     </section>
 
