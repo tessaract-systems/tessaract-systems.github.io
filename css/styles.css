@@ -2028,3 +2028,61 @@ a { color: inherit; }
 
 @media (max-width: 900px) { .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .work-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* --------------------------------------------------------------------------
+   Home page: problem-first layout
+   -------------------------------------------------------------------------- */
+
+/* The home hero carries the page, so it gets more room than a subpage hero
+   and a single column -- there is no step map beside it. */
+.home-hero { padding: clamp(64px, 9vw, 128px) 0 clamp(56px, 7vw, 96px); }
+.home-hero .page-hero-grid { grid-template-columns: minmax(0, 1fr); }
+.home-hero h1 { max-width: 19ch; }
+.home-hero .lede { max-width: 34em; }
+
+/* The journey intro now sits where the hero used to, in the same grid slot,
+   so it keeps .hero-copy's full-viewport height and the stack still animates
+   through data-step="0". It is an h2 now, not the page's h1. */
+.hero-copy h2 { max-width: 16ch; }
+.hero-copy .eyebrow { margin-bottom: 18px; }
+
+/* Recognition cards. The quote is the heading: the visitor should be able to
+   skim six of these and find themselves in one. */
+.problem-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 1.8vw, 24px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.problem-card {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(22px, 2.4vw, 30px);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.problem-card h3 {
+  font-size: clamp(1.0625rem, 1.45vw, 1.25rem);
+  line-height: 1.3;
+  letter-spacing: -.012em;
+  color: var(--ink);
+}
+
+.problem-card p {
+  margin: 12px 0 0;
+  font-size: .9375rem;
+  line-height: 1.6;
+  color: var(--graphite);
+  text-wrap: pretty;
+}
+
+.problem-card .start-link { margin-top: auto; padding-top: 18px; }
+
+@media (max-width: 980px) { .problem-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .problem-list { grid-template-columns: minmax(0, 1fr); } }
