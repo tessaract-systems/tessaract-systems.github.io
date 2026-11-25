@@ -13,10 +13,17 @@ The whole mark is one isometric construction driven by two numbers in
 | `RATIO` | plane width : height — this *is* the camera elevation |
 | `GAP` | vertical distance between plane centres |
 
-`RATIO` is **1.7320508** (√3), true isometric, a 35.264° camera. That is the
-projection in which a square tile reads as a square. It was previously 2.0
-(a 30° camera), which made every plane ~15% too flat, so the planes read as
-rectangles rather than squares.
+`RATIO` is **1.600** — a 38.68° camera. It was originally 2.0 (a 30° camera),
+which made every plane read as a rectangle rather than a square.
+
+Textbook true isometric is 1.7320508 (√3, a 35.264° camera), and that is the
+projection in which a square tile is *geometrically* square. In this mark it
+still read as slightly stretched horizontally, so the camera sits a little
+higher than textbook. That is not a cheat: any ratio is a square tile seen
+from `asin(1/RATIO)` elevation, so 1.600 is simply a square viewed from 38.68°.
+
+Below about 1.55 the layers start to crowd at a gap of 24 and the gap has to
+open with them, or the four planes stop reading as four.
 
 Regenerate everything after changing either number:
 
@@ -53,13 +60,13 @@ planes and the signal diamond and stays readable down to 16px.
 generate.py                       the generator -- the source of truth
 _wordmark.svg                     TESSARACT / SYSTEMS as outlines
 
-tessaract-logo.svg                mark + wordmark, dark ink     2000 x 1055
+tessaract-logo.svg                mark + wordmark, dark ink     2000 x 1088
 tessaract-logo-light.svg          same, for dark backgrounds
-tessaract-mark.svg                mark only, full detail          368 x 300
+tessaract-mark.svg                mark only, full detail          368 x 317
 tessaract-mark-light.svg          same, for dark backgrounds
-tessaract-mark-ui.svg             heavier strokes, for 40-80px    368 x 305
+tessaract-mark-ui.svg             heavier strokes, for 40-80px    368 x 322
 tessaract-mark-ui-light.svg       same, for dark backgrounds
-tessaract-mark-simple.svg         simplified, for small sizes     368 x 341
+tessaract-mark-simple.svg         simplified, for small sizes     368 x 357
 tessaract-mark-simple-light.svg   same, for dark backgrounds
 icon.svg / icon-light.svg         square, transparent, favicons
 apple-touch.svg                   square, paper ground, iOS

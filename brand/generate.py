@@ -20,6 +20,11 @@ Usage:  python3 brand/generate.py [--ratio R] [--gap G] [--out DIR]
 """
 import argparse, io, math, os, re
 
+# The camera. 2.000 was the original 30-deg "game isometric", which read as
+# flat; 1.732 is textbook true isometric; 1.600 (38.7 deg) is where the planes
+# stop looking stretched to the eye, which is what the brand is cut at.
+RATIO = 1.6
+
 INK, SIGNAL, PAPER = "#2A373D", "#DB5461", "#FAFAFA"
 CX = 200.0          # horizontal centre of the stack
 HW = 170.0          # plane half-width -- fixed, the mark's width never changes
@@ -533,7 +538,7 @@ def build(ratio, gap, gap_simple):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--ratio", type=float, default=math.sqrt(3))
+    ap.add_argument("--ratio", type=float, default=RATIO)
     ap.add_argument("--gap", type=float, default=24.0)
     ap.add_argument("--gap-simple", type=float, default=36.0)
     ap.add_argument("--out", default=os.path.dirname(os.path.abspath(__file__)))
