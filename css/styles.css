@@ -2251,7 +2251,7 @@ a { color: inherit; }
    read as the core having energy, not as a glow effect. */
 .hf-bloom {
   opacity: 0;
-  transform-origin: 200px 148.2px;
+  transform-origin: 200px 154.11px;
   animation: hf-bloom 20s ease-in-out infinite;
 }
 

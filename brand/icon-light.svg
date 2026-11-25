@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Tessaract Systems">
+  <title>Tessaract Systems</title>
+  <defs>
+    <mask id="icl_s0" maskUnits="userSpaceOnUse" x="0" y="0" width="760" height="610">
+        <rect x="0" y="0" width="760" height="610" fill="#fff"/>
+        <polygon points="200,224.85 370,323 200,421.15 30,323" fill="#000" stroke="#000" stroke-width="26" stroke-linejoin="round"/>
+        <polygon points="200,188.85 370,287 200,385.15 30,287" fill="#000" stroke="#000" stroke-width="26" stroke-linejoin="round"/>
+        <polygon points="200,152.85 370,251 200,349.15 30,251" fill="#000" stroke="#000" stroke-width="26" stroke-linejoin="round"/>
+    </mask>
+    <mask id="icl_s1" maskUnits="userSpaceOnUse" x="0" y="0" width="760" height="610">
+        <rect x="0" y="0" width="760" height="610" fill="#fff"/>
+        <polygon points="200,188.85 370,287 200,385.15 30,287" fill="#000" stroke="#000" stroke-width="26" stroke-linejoin="round"/>
+        <polygon points="200,152.85 370,251 200,349.15 30,251" fill="#000" stroke="#000" stroke-width="26" stroke-linejoin="round"/>
+    </mask>
+    <mask id="icl_s2" maskUnits="userSpaceOnUse" x="0" y="0" width="760" height="610">
+        <rect x="0" y="0" width="760" height="610" fill="#fff"/>
+        <polygon points="200,152.85 370,251 200,349.15 30,251" fill="#000" stroke="#000" stroke-width="26" stroke-linejoin="round"/>
+    </mask>
+  </defs>
+<g transform="translate(51.2,66.06) scale(1.1130434782608696) translate(-16,-134.35)">
+  <polygon mask="url(#icl_s0)" points="200,260.85 370,359 200,457.15 30,359" fill="none" stroke="#FAFAFA" stroke-width="9" stroke-linejoin="round"/>
+  <polygon mask="url(#icl_s1)" points="200,224.85 370,323 200,421.15 30,323" fill="none" stroke="#FAFAFA" stroke-width="9" stroke-linejoin="round"/>
+  <polygon mask="url(#icl_s2)" points="200,188.85 370,287 200,385.15 30,287" fill="none" stroke="#FAFAFA" stroke-width="9" stroke-linejoin="round"/>
+  <polygon points="200,152.85 370,251 200,349.15 30,251" fill="none" stroke="#FAFAFA" stroke-width="9" stroke-linejoin="round"/>
+  <polygon points="200,223.29 248,251 200,278.71 152,251" fill="#DB5461"/>
+</g>
+</svg>

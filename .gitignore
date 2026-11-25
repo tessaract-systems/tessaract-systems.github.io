@@ -14,3 +14,7 @@ gtm/
 assets/palette.png
 assets/Font File.ttf
 assets/ico.png
+
+# generator bytecode
+__pycache__/
+*.pyc
