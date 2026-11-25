@@ -1,51 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="16 146.75 368 316.5" width="368" height="316.5" role="img" aria-label="Tessaract Systems">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="16 128.06 368 353.87" width="368" height="353.87" role="img" aria-label="Tessaract Systems">
   <title>Tessaract Systems</title>
   <defs>
     <mask id="m0" maskUnits="userSpaceOnUse" x="0" y="0" width="760" height="610">
         <rect x="0" y="0" width="760" height="610" fill="#fff"/>
-        <polygon points="200,210.75 370,317 200,423.25 30,317" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
-        <polygon points="200,186.75 370,293 200,399.25 30,293" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
-        <polygon points="200,162.75 370,269 200,375.25 30,269" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
+        <polygon points="200,198.37 370,318.58 200,438.78 30,318.58" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
+        <polygon points="200,171.22 370,291.42 200,411.63 30,291.42" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
+        <polygon points="200,144.06 370,264.27 200,384.48 30,264.27" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
     </mask>
     <mask id="m1" maskUnits="userSpaceOnUse" x="0" y="0" width="760" height="610">
         <rect x="0" y="0" width="760" height="610" fill="#fff"/>
-        <polygon points="200,186.75 370,293 200,399.25 30,293" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
-        <polygon points="200,162.75 370,269 200,375.25 30,269" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
+        <polygon points="200,171.22 370,291.42 200,411.63 30,291.42" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
+        <polygon points="200,144.06 370,264.27 200,384.48 30,264.27" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
     </mask>
     <mask id="m2" maskUnits="userSpaceOnUse" x="0" y="0" width="760" height="610">
         <rect x="0" y="0" width="760" height="610" fill="#fff"/>
-        <polygon points="200,162.75 370,269 200,375.25 30,269" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
+        <polygon points="200,144.06 370,264.27 200,384.48 30,264.27" fill="#000" stroke="#000" stroke-width="22" stroke-linejoin="round"/>
     </mask>
   </defs>
     <g mask="url(#m0)">
-      <polygon points="200,234.75 370,341 200,447.25 30,341" fill="none" stroke="#FAFAFA" stroke-width="4" stroke-linejoin="round"/>
-      <path d="M72.5,367.56 L242.5,261.31 M115,394.12 L285,287.88 M157.5,420.69 L327.5,314.44 M157.5,261.31 L327.5,367.56 M115,287.88 L285,394.12 M72.5,314.44 L242.5,420.69" fill="none" stroke="#FAFAFA" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+      <polygon points="200,225.52 370,345.73 200,465.94 30,345.73" fill="none" stroke="#FAFAFA" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M72.5,375.78 L242.5,255.57 M115,405.83 L285,285.63 M157.5,435.89 L327.5,315.68 M157.5,255.57 L327.5,375.78 M115,285.63 L285,405.83 M72.5,315.68 L242.5,435.89" fill="none" stroke="#FAFAFA" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
     </g>
     <g mask="url(#m1)">
-      <polygon points="200,210.75 370,317 200,423.25 30,317" fill="none" stroke="#FAFAFA" stroke-width="4" stroke-linejoin="round"/>
-      <path d="M195.8,319.62 L191.5,263.88" fill="none" stroke="#FAFAFA" stroke-width="2" opacity=".75"/>
-      <path d="M195.8,319.62 L289.2,314.38" fill="none" stroke="#FAFAFA" stroke-width="2" opacity=".75"/>
-      <path d="M195.8,319.62 L106.5,322.25" fill="none" stroke="#FAFAFA" stroke-width="2" opacity=".75"/>
-      <path d="M195.8,319.62 L204.2,372.75" fill="none" stroke="#FAFAFA" stroke-width="2" opacity=".75"/>
-      <path d="M191.5,263.88 L289.2,314.38 M204.2,372.75 L106.5,322.25" fill="none" stroke="#FAFAFA" stroke-width="2" opacity=".75"/>
-      <ellipse cx="191.5" cy="263.88" rx="10.8" ry="6.75" fill="#2A373D" stroke="#FAFAFA" stroke-width="2"/>
-      <ellipse cx="289.2" cy="314.38" rx="10.8" ry="6.75" fill="#2A373D" stroke="#FAFAFA" stroke-width="2"/>
-      <ellipse cx="106.5" cy="322.25" rx="10.8" ry="6.75" fill="#2A373D" stroke="#FAFAFA" stroke-width="2"/>
-      <ellipse cx="204.2" cy="372.75" rx="10.8" ry="6.75" fill="#2A373D" stroke="#FAFAFA" stroke-width="2"/>
-      <ellipse cx="195.8" cy="319.62" rx="15.6" ry="9.75" fill="#FAFAFA" stroke="#FAFAFA" stroke-width="2"/>
+      <polygon points="200,198.37 370,318.58 200,438.78 30,318.58" fill="none" stroke="#FAFAFA" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M195.8,321.55 L191.5,258.47" fill="none" stroke="#FAFAFA" stroke-width="2" opacity=".75"/>
+      <path d="M195.8,321.55 L289.2,315.61" fill="none" stroke="#FAFAFA" stroke-width="2" opacity=".75"/>
+      <path d="M195.8,321.55 L106.5,324.52" fill="none" stroke="#FAFAFA" stroke-width="2" opacity=".75"/>
+      <path d="M195.8,321.55 L204.2,381.65" fill="none" stroke="#FAFAFA" stroke-width="2" opacity=".75"/>
+      <path d="M191.5,258.47 L289.2,315.61 M204.2,381.65 L106.5,324.52" fill="none" stroke="#FAFAFA" stroke-width="2" opacity=".75"/>
+      <ellipse cx="191.5" cy="258.47" rx="10.8" ry="7.64" fill="#2A373D" stroke="#FAFAFA" stroke-width="2"/>
+      <ellipse cx="289.2" cy="315.61" rx="10.8" ry="7.64" fill="#2A373D" stroke="#FAFAFA" stroke-width="2"/>
+      <ellipse cx="106.5" cy="324.52" rx="10.8" ry="7.64" fill="#2A373D" stroke="#FAFAFA" stroke-width="2"/>
+      <ellipse cx="204.2" cy="381.65" rx="10.8" ry="7.64" fill="#2A373D" stroke="#FAFAFA" stroke-width="2"/>
+      <ellipse cx="195.8" cy="321.55" rx="15.6" ry="11.03" fill="#FAFAFA" stroke="#FAFAFA" stroke-width="2"/>
     </g>
     <g mask="url(#m2)">
-      <polygon points="200,186.75 370,293 200,399.25 30,293" fill="none" stroke="#FAFAFA" stroke-width="4" stroke-linejoin="round"/>
-      <polygon points="200,220.75 315.6,293 200,365.25 84.4,293" fill="none" stroke="#FAFAFA" stroke-width="2" stroke-dasharray="7 8" opacity=".75"/>
-      <polygon points="200,259 254.4,293 200,327 145.6,293" fill="none" stroke="#FAFAFA" stroke-width="2" opacity=".75"/>
-      <ellipse cx="200" cy="293" rx="9.6" ry="6" fill="#DB5461"/>
+      <polygon points="200,171.22 370,291.42 200,411.63 30,291.42" fill="none" stroke="#FAFAFA" stroke-width="4" stroke-linejoin="round"/>
+      <polygon points="200,209.68 315.6,291.42 200,373.17 84.4,291.42" fill="none" stroke="#FAFAFA" stroke-width="2" stroke-dasharray="7 8" opacity=".75"/>
+      <polygon points="200,252.96 254.4,291.42 200,329.89 145.6,291.42" fill="none" stroke="#FAFAFA" stroke-width="2" opacity=".75"/>
+      <ellipse cx="200" cy="291.42" rx="9.6" ry="6.79" fill="#DB5461"/>
     </g>
     <g>
-      <polygon points="200,162.75 370,269 200,375.25 30,269" fill="none" stroke="#FAFAFA" stroke-width="4" stroke-linejoin="round"/>
-      <polygon points="200,221.19 276.5,269 200,316.81 123.5,269" fill="none" stroke="#FAFAFA" stroke-width="1.5" opacity=".5"/>
-      <polygon points="200,203.12 228.9,221.19 200,239.25 171.1,221.19" fill="#2A373D" stroke="#FAFAFA" stroke-width="2"/>
-      <polygon points="276.5,250.94 305.4,269 276.5,287.06 247.6,269" fill="#2A373D" stroke="#FAFAFA" stroke-width="2"/>
-      <polygon points="123.5,250.94 152.4,269 123.5,287.06 94.6,269" fill="#2A373D" stroke="#FAFAFA" stroke-width="2"/>
-      <polygon points="200,298.75 228.9,316.81 200,334.88 171.1,316.81" fill="#DB5461" stroke="#DB5461" stroke-width="2"/>
+      <polygon points="200,144.06 370,264.27 200,384.48 30,264.27" fill="none" stroke="#FAFAFA" stroke-width="4" stroke-linejoin="round"/>
+      <polygon points="200,210.18 276.5,264.27 200,318.36 123.5,264.27" fill="none" stroke="#FAFAFA" stroke-width="1.5" opacity=".5"/>
+      <polygon points="200,189.74 228.9,210.18 200,230.61 171.1,210.18" fill="#2A373D" stroke="#FAFAFA" stroke-width="2"/>
+      <polygon points="276.5,243.84 305.4,264.27 276.5,284.71 247.6,264.27" fill="#2A373D" stroke="#FAFAFA" stroke-width="2"/>
+      <polygon points="123.5,243.84 152.4,264.27 123.5,284.71 94.6,264.27" fill="#2A373D" stroke="#FAFAFA" stroke-width="2"/>
+      <polygon points="200,297.93 228.9,318.36 200,338.8 171.1,318.36" fill="#DB5461" stroke="#DB5461" stroke-width="2"/>
     </g>
 </svg>

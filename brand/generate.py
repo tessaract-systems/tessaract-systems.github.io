@@ -21,9 +21,17 @@ Usage:  python3 brand/generate.py [--ratio R] [--gap G] [--out DIR]
 import argparse, io, math, os, re
 
 # The camera. 2.000 was the original 30-deg "game isometric", which read as
-# flat; 1.732 is textbook true isometric; 1.600 (38.7 deg) is where the planes
-# stop looking stretched to the eye, which is what the brand is cut at.
-RATIO = 1.6
+# flat. 1.732 is textbook true isometric. Both still looked stretched, so the
+# brand is cut at root-2: the camera sits at exactly 45 deg, halfway between
+# flat-on and straight down. Below about 1.3 the stack stops reading as
+# stacked planes and starts reading as concentric diamonds.
+RATIO = 1.4142136
+
+# Layer spacing, scaled with the plane height so four layers keep reading as
+# four. GAP_OPEN is the hero stack's spread while it is open.
+GAP = round(24.0 * (170.0 / RATIO) / 106.25, 4)
+GAP_SIMPLE = round(36.0 * (170.0 / RATIO) / 106.25, 4)
+GAP_OPEN = 130.0
 
 INK, SIGNAL, PAPER = "#2A373D", "#DB5461", "#FAFAFA"
 CX = 200.0          # horizontal centre of the stack
@@ -539,8 +547,8 @@ def build(ratio, gap, gap_simple):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--ratio", type=float, default=RATIO)
-    ap.add_argument("--gap", type=float, default=24.0)
-    ap.add_argument("--gap-simple", type=float, default=36.0)
+    ap.add_argument("--gap", type=float, default=GAP)
+    ap.add_argument("--gap-simple", type=float, default=GAP_SIMPLE)
     ap.add_argument("--out", default=os.path.dirname(os.path.abspath(__file__)))
     a = ap.parse_args()
     g = Geo(a.ratio, a.gap)

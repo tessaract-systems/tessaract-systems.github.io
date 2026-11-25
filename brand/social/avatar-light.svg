@@ -3,30 +3,30 @@
   <defs>
     <mask id="a1_um0" maskUnits="userSpaceOnUse" x="0" y="0" width="760" height="610">
         <rect x="0" y="0" width="760" height="610" fill="#fff"/>
-        <polygon points="200,210.75 370,317 200,423.25 30,317" fill="#000" stroke="#000" stroke-width="30" stroke-linejoin="round"/>
-        <polygon points="200,186.75 370,293 200,399.25 30,293" fill="#000" stroke="#000" stroke-width="30" stroke-linejoin="round"/>
-        <polygon points="200,162.75 370,269 200,375.25 30,269" fill="#000" stroke="#000" stroke-width="30" stroke-linejoin="round"/>
+        <polygon points="200,198.37 370,318.58 200,438.78 30,318.58" fill="#000" stroke="#000" stroke-width="30" stroke-linejoin="round"/>
+        <polygon points="200,171.22 370,291.42 200,411.63 30,291.42" fill="#000" stroke="#000" stroke-width="30" stroke-linejoin="round"/>
+        <polygon points="200,144.06 370,264.27 200,384.48 30,264.27" fill="#000" stroke="#000" stroke-width="30" stroke-linejoin="round"/>
     </mask>
     <mask id="a1_um1" maskUnits="userSpaceOnUse" x="0" y="0" width="760" height="610">
         <rect x="0" y="0" width="760" height="610" fill="#fff"/>
-        <polygon points="200,186.75 370,293 200,399.25 30,293" fill="#000" stroke="#000" stroke-width="30" stroke-linejoin="round"/>
-        <polygon points="200,162.75 370,269 200,375.25 30,269" fill="#000" stroke="#000" stroke-width="30" stroke-linejoin="round"/>
+        <polygon points="200,171.22 370,291.42 200,411.63 30,291.42" fill="#000" stroke="#000" stroke-width="30" stroke-linejoin="round"/>
+        <polygon points="200,144.06 370,264.27 200,384.48 30,264.27" fill="#000" stroke="#000" stroke-width="30" stroke-linejoin="round"/>
     </mask>
     <mask id="a1_um2" maskUnits="userSpaceOnUse" x="0" y="0" width="760" height="610">
         <rect x="0" y="0" width="760" height="610" fill="#fff"/>
-        <polygon points="200,162.75 370,269 200,375.25 30,269" fill="#000" stroke="#000" stroke-width="30" stroke-linejoin="round"/>
+        <polygon points="200,144.06 370,264.27 200,384.48 30,264.27" fill="#000" stroke="#000" stroke-width="30" stroke-linejoin="round"/>
     </mask>
   </defs>
   <rect width="1000" height="1000" fill="#FAFAFA"/>
-<g transform="translate(190,229.17) scale(1.684782608695652) translate(-16,-144.25)">
-  <polygon mask="url(#a1_um0)" points="200,234.75 370,341 200,447.25 30,341" fill="none" stroke="#2A373D" stroke-width="9" stroke-linejoin="round"/>
-  <polygon mask="url(#a1_um1)" points="200,210.75 370,317 200,423.25 30,317" fill="none" stroke="#2A373D" stroke-width="9" stroke-linejoin="round"/>
-  <polygon mask="url(#a1_um2)" points="200,186.75 370,293 200,399.25 30,293" fill="none" stroke="#2A373D" stroke-width="9" stroke-linejoin="round"/>
-  <polygon points="200,162.75 370,269 200,375.25 30,269" fill="none" stroke="#2A373D" stroke-width="9" stroke-linejoin="round"/>
-  <polygon points="200,221.19 276.5,269 200,316.81 123.5,269" fill="none" stroke="#2A373D" stroke-width="4" opacity=".55"/>
-  <polygon points="200,200 234,221.25 200,242.5 166,221.25" fill="#FAFAFA" stroke="#2A373D" stroke-width="6" stroke-linejoin="round"/>
-  <polygon points="276.5,247.75 310.5,269 276.5,290.25 242.5,269" fill="#FAFAFA" stroke="#2A373D" stroke-width="6" stroke-linejoin="round"/>
-  <polygon points="123.5,247.75 157.5,269 123.5,290.25 89.5,269" fill="#FAFAFA" stroke="#2A373D" stroke-width="6" stroke-linejoin="round"/>
-  <polygon points="200,294.25 236,316.75 200,339.25 164,316.75" fill="#DB5461"/>
+<g transform="translate(190,197.69) scale(1.684782608695652) translate(-16,-125.56)">
+  <polygon mask="url(#a1_um0)" points="200,225.52 370,345.73 200,465.94 30,345.73" fill="none" stroke="#2A373D" stroke-width="9" stroke-linejoin="round"/>
+  <polygon mask="url(#a1_um1)" points="200,198.37 370,318.58 200,438.78 30,318.58" fill="none" stroke="#2A373D" stroke-width="9" stroke-linejoin="round"/>
+  <polygon mask="url(#a1_um2)" points="200,171.22 370,291.42 200,411.63 30,291.42" fill="none" stroke="#2A373D" stroke-width="9" stroke-linejoin="round"/>
+  <polygon points="200,144.06 370,264.27 200,384.48 30,264.27" fill="none" stroke="#2A373D" stroke-width="9" stroke-linejoin="round"/>
+  <polygon points="200,210.18 276.5,264.27 200,318.36 123.5,264.27" fill="none" stroke="#2A373D" stroke-width="4" opacity=".55"/>
+  <polygon points="200,186.21 234,210.25 200,234.29 166,210.25" fill="#FAFAFA" stroke="#2A373D" stroke-width="6" stroke-linejoin="round"/>
+  <polygon points="276.5,240.23 310.5,264.27 276.5,288.31 242.5,264.27" fill="#FAFAFA" stroke="#2A373D" stroke-width="6" stroke-linejoin="round"/>
+  <polygon points="123.5,240.23 157.5,264.27 123.5,288.31 89.5,264.27" fill="#FAFAFA" stroke="#2A373D" stroke-width="6" stroke-linejoin="round"/>
+  <polygon points="200,292.84 236,318.29 200,343.75 164,318.29" fill="#DB5461"/>
 </g>
 </svg>

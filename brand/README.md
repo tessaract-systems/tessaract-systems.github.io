@@ -13,17 +13,24 @@ The whole mark is one isometric construction driven by two numbers in
 | `RATIO` | plane width : height — this *is* the camera elevation |
 | `GAP` | vertical distance between plane centres |
 
-`RATIO` is **1.600** — a 38.68° camera. It was originally 2.0 (a 30° camera),
-which made every plane read as a rectangle rather than a square.
+`RATIO` is **1.4142136** (√2) — the camera sits at exactly **45°**, halfway
+between flat-on and straight down.
 
-Textbook true isometric is 1.7320508 (√3, a 35.264° camera), and that is the
-projection in which a square tile is *geometrically* square. In this mark it
-still read as slightly stretched horizontally, so the camera sits a little
-higher than textbook. That is not a cheat: any ratio is a square tile seen
-from `asin(1/RATIO)` elevation, so 1.600 is simply a square viewed from 38.68°.
+It was originally 2.0 (a 30° camera), which made every plane read as a
+rectangle. Textbook true isometric is 1.7320508 (√3, 35.264°) and that is
+the projection in which a square tile is *geometrically* square — but both
+that and 1.600 still read as stretched horizontally, because the eye judges
+the whole stack, not one tile. Any ratio is a square tile viewed from
+`asin(1/RATIO)` elevation, so a higher camera is not a distortion.
 
-Below about 1.55 the layers start to crowd at a gap of 24 and the gap has to
-open with them, or the four planes stop reading as four.
+`GAP` scales with the plane height so four layers keep reading as four.
+Below about **1.3** the stack stops reading as stacked planes and starts
+reading as concentric diamonds — that is the floor.
+
+**Changing `RATIO` also moves the hero animation.** Each layer's travel is
+`closed_centre - open_centre`, so `@keyframes hf-0..hf-3`, the
+`prefers-reduced-motion` fallback and `.hf-bloom`'s `transform-origin` in
+`css/styles.css` all have to be recomputed with it.
 
 Regenerate everything after changing either number:
 
@@ -60,13 +67,13 @@ planes and the signal diamond and stays readable down to 16px.
 generate.py                       the generator -- the source of truth
 _wordmark.svg                     TESSARACT / SYSTEMS as outlines
 
-tessaract-logo.svg                mark + wordmark, dark ink     2000 x 1088
+tessaract-logo.svg                mark + wordmark, dark ink     2000 x 1164
 tessaract-logo-light.svg          same, for dark backgrounds
-tessaract-mark.svg                mark only, full detail          368 x 317
+tessaract-mark.svg                mark only, full detail          368 x 354
 tessaract-mark-light.svg          same, for dark backgrounds
-tessaract-mark-ui.svg             heavier strokes, for 40-80px    368 x 322
+tessaract-mark-ui.svg             heavier strokes, for 40-80px    368 x 359
 tessaract-mark-ui-light.svg       same, for dark backgrounds
-tessaract-mark-simple.svg         simplified, for small sizes     368 x 357
+tessaract-mark-simple.svg         simplified, for small sizes     368 x 400
 tessaract-mark-simple-light.svg   same, for dark backgrounds
 icon.svg / icon-light.svg         square, transparent, favicons
 apple-touch.svg                   square, paper ground, iOS
