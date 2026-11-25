@@ -2300,7 +2300,7 @@ a { color: inherit; }
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: clamp(24px, 2.6vw, 34px);
+  padding: clamp(22px, 2.3vw, 30px);
   text-decoration: none;
   color: inherit;
 }
@@ -2321,8 +2321,8 @@ a { color: inherit; }
 
 .svc-card > a > p {
   margin: 0;
-  font-size: .9375rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.58;
   color: var(--graphite);
   text-wrap: pretty;
 }
@@ -2337,7 +2337,7 @@ a { color: inherit; }
 .svc-list li {
   position: relative;
   padding-left: 18px;
-  font-size: .875rem;
+  font-size: .9375rem;
   line-height: 1.5;
   color: var(--graphite);
 }
@@ -2404,7 +2404,7 @@ a { color: inherit; }
 }
 
 .usecase-card {
-  padding: clamp(22px, 2.3vw, 30px);
+  padding: clamp(20px, 2.1vw, 26px);
   border: 1px solid var(--rule);
   border-radius: 16px;
   background: var(--surface);
@@ -2449,8 +2449,8 @@ a { color: inherit; }
 
 .usecase-card > p:last-child {
   margin: 0;
-  font-size: .9375rem;
-  line-height: 1.62;
+  font-size: 1rem;
+  line-height: 1.58;
   color: var(--graphite);
   text-wrap: pretty;
 }
@@ -2462,7 +2462,7 @@ a { color: inherit; }
   gap: 8px 18px;
   max-width: 76ch;
   margin: clamp(24px, 2.8vw, 34px) 0 0;
-  font-size: .9375rem;
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--slate);
 }
@@ -2478,7 +2478,7 @@ a { color: inherit; }
 
 /* Compact variant: the home page shows the three divisions, the services
    page shows what is inside each one. */
-.svc-grid-compact .svc-link { padding: clamp(22px, 2.2vw, 28px); }
+.svc-grid-compact .svc-link { padding: clamp(20px, 2vw, 26px); }
 .svc-grid-compact .svc-glyph { width: 66px; margin-bottom: 16px; }
 .svc-grid-compact .svc-cta { padding-top: 20px; }
 
@@ -2509,8 +2509,8 @@ a { color: inherit; }
 .svc-aside p {
   margin: 0;
   max-width: 62ch;
-  font-size: .9375rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.58;
   color: var(--slate);
   text-wrap: pretty;
 }
