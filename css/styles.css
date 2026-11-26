@@ -773,6 +773,18 @@ a { color: inherit; }
   background: var(--surface);
   box-shadow: var(--shadow-md);
 }
+
+/* Step 0. The free way in spans the whole row above the four paid steps rather
+   than sitting in the grid as a fifth narrow card -- a 5-column row squeezes
+   every card below a readable measure, and 4+1 leaves an orphan on wrap. */
+.engage-step.is-free {
+  grid-column: 1 / -1;
+  border-color: var(--signal);
+  background: var(--mist);
+}
+.engage-step.is-free .engage-tag { background: var(--signal); color: #fff; }
+.engage-step.is-free > p { max-width: 64ch; font-size: 1rem; }
+.engage-step.is-free .engage-meta { margin-top: 20px; border-top-color: var(--mist-line); }
 .engage-tag {
   display: inline-flex;
   align-self: flex-start;
