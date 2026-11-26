@@ -779,12 +779,37 @@ a { color: inherit; }
    every card below a readable measure, and 4+1 leaves an orphan on wrap. */
 .engage-step.is-free {
   grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(170px, auto);
+  column-gap: clamp(24px, 3vw, 56px);
+  align-items: start;
   border-color: var(--signal);
   background: var(--mist);
 }
-.engage-step.is-free .engage-tag { background: var(--signal); color: #fff; }
-.engage-step.is-free > p { max-width: 64ch; font-size: 1rem; }
-.engage-step.is-free .engage-meta { margin-top: 20px; border-top-color: var(--mist-line); }
+.engage-step.is-free .engage-tag {
+  grid-column: 1 / -1;
+  justify-self: start;
+  background: var(--signal);
+  color: #fff;
+}
+.engage-step.is-free h3 { grid-column: 1; }
+.engage-step.is-free > p:not(.engage-meta) {
+  grid-column: 1;
+  margin: 0;
+  max-width: 64ch;
+  font-size: 1rem;
+}
+/* The terms sit beside the copy rather than under it: on a full-width card a
+   stacked meta leaves the right half empty and the rule stops mid-air. */
+.engage-step.is-free .engage-meta {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+  align-self: center;
+  margin: 0;
+  padding: 0 0 0 clamp(24px, 3vw, 40px);
+  border-top: 0;
+  border-left: 1px solid var(--mist-line);
+}
 .engage-tag {
   display: inline-flex;
   align-self: flex-start;
@@ -2011,6 +2036,16 @@ a { color: inherit; }
   .capability-grid,
   .engage-steps,
   .record-stats { grid-template-columns: 1fr; }
+
+  .engage-step.is-free { grid-template-columns: 1fr; }
+  .engage-step.is-free .engage-meta {
+    grid-column: 1;
+    grid-row: auto;
+    margin-top: 20px;
+    padding: 16px 0 0;
+    border-top: 1px solid var(--mist-line);
+    border-left: 0;
+  }
 
   .work-track { --fade-size: 18px; }
   .work-card { flex-basis: 85%; padding: 26px 24px 28px; }
