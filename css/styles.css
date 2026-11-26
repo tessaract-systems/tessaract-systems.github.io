@@ -1545,6 +1545,37 @@ a { color: inherit; }
 .price-block-invert .price-big { color: var(--paper); }
 .price-block-invert .price-terms { color: rgba(250, 250, 250, .7); }
 
+/* Step 0: the free teardown.
+   Tinted rather than white, so the free step reads as a different kind of
+   thing from the paid packages below it rather than competing with them. Its
+   detail panel takes the mist rule, leaving the signal border to the paid
+   assessment. */
+
+.teardown {
+  background: var(--mist);
+  border-top: 1px solid var(--mist-line);
+  border-bottom: 1px solid var(--mist-line);
+}
+
+.teardown .package-feature-detail {
+  border-color: var(--mist-line);
+  background: var(--surface);
+}
+
+.teardown-note {
+  margin: 0;
+  font-size: .9688rem;
+  line-height: 1.62;
+  color: var(--graphite);
+  text-wrap: pretty;
+}
+
+/* "Free" where the other steps carry a duration. */
+.step-map-free {
+  color: var(--signal-deep);
+  font-weight: 600;
+}
+
 /* Step 1: assessment */
 
 .assessment {

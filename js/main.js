@@ -520,7 +520,24 @@
   }());
 
   /* ---------------------------------------------------------------------
-     9. Footer year
+     9. Deep link into the form
+     The free-teardown CTAs link to /contact/?s=teardown. Preselect the
+     matching option so the visitor doesn't have to restate why they came.
+     --------------------------------------------------------------------- */
+  (function () {
+    var stage = document.getElementById('f-stage');
+    if (!stage || !window.URLSearchParams) return;
+    if (new URLSearchParams(window.location.search).get('s') !== 'teardown') return;
+    for (var i = 0; i < stage.options.length; i++) {
+      if (/teardown/i.test(stage.options[i].text)) {
+        stage.selectedIndex = i;
+        break;
+      }
+    }
+  }());
+
+  /* ---------------------------------------------------------------------
+     10. Footer year
      --------------------------------------------------------------------- */
   (function () {
     var year = document.getElementById('year');
