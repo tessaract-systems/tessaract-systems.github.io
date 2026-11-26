@@ -521,15 +521,15 @@
 
   /* ---------------------------------------------------------------------
      9. Deep link into the form
-     The free-teardown CTAs link to /contact/?s=teardown. Preselect the
+     The free-assessment CTAs link to /contact/?s=assessment. Preselect the
      matching option so the visitor doesn't have to restate why they came.
      --------------------------------------------------------------------- */
   (function () {
     var stage = document.getElementById('f-stage');
     if (!stage || !window.URLSearchParams) return;
-    if (new URLSearchParams(window.location.search).get('s') !== 'teardown') return;
+    if (new URLSearchParams(window.location.search).get('s') !== 'assessment') return;
     for (var i = 0; i < stage.options.length; i++) {
-      if (/teardown/i.test(stage.options[i].text)) {
+      if (/assessment/i.test(stage.options[i].text)) {
         stage.selectedIndex = i;
         break;
       }
