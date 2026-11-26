@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Tessaract Systems">
+  <title>Tessaract Systems</title>
+  <rect width="512" height="512" fill="#2A373D"/>
+  <polygon points="256.00,180.41 445.44,314.37 256.00,448.32 66.56,314.37" fill="none" stroke="#FAFAFA" stroke-width="19.46" stroke-linejoin="round"/>
+  <polygon points="256.00,141.50 445.44,275.46 256.00,409.41 66.56,275.46" fill="none" stroke="#FAFAFA" stroke-width="19.46" stroke-linejoin="round"/>
+  <polygon points="256.00,102.59 445.44,236.54 256.00,370.50 66.56,236.54" fill="none" stroke="#FAFAFA" stroke-width="19.46" stroke-linejoin="round"/>
+  <polygon points="256.00,63.68 445.44,197.63 256.00,331.59 66.56,197.63" fill="none" stroke="#FAFAFA" stroke-width="19.46" stroke-linejoin="round"/>
+  <polygon points="256.00,159.86 309.42,197.63 256.00,235.41 202.58,197.63" fill="#DB5461"/>
+</svg>
